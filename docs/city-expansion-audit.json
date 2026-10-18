@@ -1,0 +1,808 @@
+{
+  "checked_at": "2026-10-18",
+  "initial_count": 69,
+  "added": 51,
+  "candidates": [
+    {
+      "id": "dir-praysalat-2042",
+      "name": "At Taqwa Model Mosque & Islamic Cultural Center",
+      "source_url": "https://praysalat.com/mosque/sylhet/2042-at-taqwa-model-mosque-and-islamic-cultural-center-sylhet",
+      "coordinate_source": "source-linked-map",
+      "reference": "https://www.google.com/maps/dir/?api=1&destination=24.896313,91.878312",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-2043",
+      "name": "Ghasitula Central Large Jaam e Mosjid",
+      "source_url": "https://praysalat.com/mosque/sylhet/2043-ghasitula-central-large-jaam-e-mosjid-sylhet",
+      "coordinate_source": "plus-code",
+      "reference": "VRVR+6F5",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-2045",
+      "name": "Amberkhana Central Jame Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/2045-amberkhana-central-jame-mosque-sylhet",
+      "coordinate_source": "plus-code",
+      "reference": "WV49+3WJ",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-2046",
+      "name": "Sheikhghat Central Jame Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/2046-sheikhghat-central-jame-mosque-sylhet",
+      "coordinate_source": "plus-code",
+      "reference": "VVQ4+R6X",
+      "decision": "added"
+    },
+    {
+      "candidate": "Noya Shorok Central Jame Mosque Sylhet",
+      "decision": "matched-existing",
+      "id": "osm-N12506831054",
+      "source_url": "https://praysalat.com/mosque/sylhet/2055-noya-shorok-central-jame-mosque-sylhet"
+    },
+    {
+      "id": "dir-praysalat-2057",
+      "name": "Hazi Shahmir R Jame Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/2057-hazi-shahmir-r-jame-mosque-sylhet",
+      "coordinate_source": "plus-code",
+      "reference": "WV4M+GF7",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-2058",
+      "name": "Baitun Nazat Jame Masjid, Uposhohor E Block",
+      "source_url": "https://praysalat.com/mosque/sylhet/2058-uposhohor-e-block-jame-masjid",
+      "coordinate_source": "plus-code",
+      "reference": "VVMM+HM7",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-2059",
+      "name": "Eidgah Jaam e Mosjid",
+      "source_url": "https://praysalat.com/mosque/sylhet/2059-eidgah-jaam-e-mosjid",
+      "coordinate_source": "source-linked-map",
+      "reference": "https://www.google.com/maps/dir/?api=1&destination=24.900312,91.842313",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-2066",
+      "name": "Gotatikor Central Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/2066-gotatikor-central-mosque",
+      "coordinate_source": "plus-code",
+      "reference": "VVCM+P4F",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-2067",
+      "name": "Kushighat Burhanabad Central Jame Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/2067-kushighat-burhanabad-central-jame-mosque",
+      "coordinate_source": "plus-code",
+      "reference": "VVHW+4VX",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-69798",
+      "name": "East Pirmoholla Central Jame Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/69798-east-pirmoholla-central-jame-mosque-sylhet",
+      "coordinate_source": "source-linked-map",
+      "reference": "https://www.google.com/maps/dir/?api=1&destination=24.912937,91.868188",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-69799",
+      "name": "Al-Hamra Shopping City Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/69799-al-hamra-jame-mosque-sylhet",
+      "coordinate_source": "plus-code",
+      "reference": "VVW9+R29",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-69800",
+      "name": "Al Hamra Jame Mosque, Jotorpur",
+      "source_url": "https://praysalat.com/mosque/sylhet/69800-al-hamra-jame-mosque",
+      "coordinate_source": "source-linked-map",
+      "reference": "https://www.google.com/maps/dir/?api=1&destination=24.892437,91.882813",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-69801",
+      "name": "TB Gate Hospital Jame Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/69801-tb-gate-hospital-jame-mosque-sylhet",
+      "coordinate_source": "plus-code",
+      "reference": "WV4Q+CXR",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-69806",
+      "name": "Khoradipara Jame Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/69806-khoradipara-jame-mosque-sylhet",
+      "coordinate_source": "plus-code",
+      "reference": "WV2V+P52",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-69807",
+      "name": "Shahporan Gate Jame Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/69807-shahporan-gate-jame-mosque-sylhet",
+      "coordinate_source": "plus-code",
+      "reference": "WW6M+G6W",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-69809",
+      "name": "Shrine Mosque of Sayyid Gaj Burhan Uddin",
+      "source_url": "https://praysalat.com/mosque/sylhet/69809-shrine-mosque-of-sayyid-gaj-burhan-uddin",
+      "coordinate_source": "plus-code",
+      "reference": "VVHV+9V2",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-72285",
+      "name": "Shonarpara Central Jame Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/72285-shonarpara-central-jame-mosque-sylhet",
+      "coordinate_source": "source-linked-map",
+      "reference": "https://www.google.com/maps/dir/?api=1&destination=24.893187,91.889313",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-76383",
+      "name": "Uposhohor Central Jame Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/76383-uposhohor-central-jame-mosque-sylhet",
+      "coordinate_source": "plus-code",
+      "reference": "VVQV+224",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-76385",
+      "name": "Shadatikor Jame Mosjid",
+      "source_url": "https://praysalat.com/mosque/sylhet/76385-shadatikor-jame-mosjid",
+      "coordinate_source": "source-linked-map",
+      "reference": "https://www.google.com/maps/dir/?api=1&destination=24.880938,91.889562",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-76387",
+      "name": "Shahjalal Uposohor Jame Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/76387-shahjalal-uposohor-jame-mosque",
+      "coordinate_source": "plus-code",
+      "reference": "VVQP+G5F",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-76389",
+      "name": "Chorarpar Jame Moshjid",
+      "source_url": "https://praysalat.com/mosque/sylhet/76389-chorarpar-jame-moshjid",
+      "coordinate_source": "plus-code",
+      "reference": "VVPG+R55",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-76403",
+      "name": "Sunargaw Mosjid",
+      "source_url": "https://praysalat.com/mosque/sylhet/76403-sunargaw-mosjid-sylhet",
+      "coordinate_source": "plus-code",
+      "reference": "VV6Q+53F",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-76404",
+      "name": "Khalopar Riverside Jame Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/76404-khalopar-riverside-jame-mosque-sylhet",
+      "coordinate_source": "plus-code",
+      "reference": "VRRQ+223",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-76407",
+      "name": "Sylhet Polytechnic Institute Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/76407-spi-masjid",
+      "coordinate_source": "source-linked-map",
+      "reference": "https://www.google.com/maps/dir/?api=1&destination=24.883812,91.856938",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-76409",
+      "name": "Lamapara Jame Masjid, Sobujbag",
+      "source_url": "https://praysalat.com/mosque/sylhet/76409-lamapara-jame-majid",
+      "coordinate_source": "source-linked-map",
+      "reference": "https://www.google.com/maps/dir/?api=1&destination=24.891687,91.893937",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-76416",
+      "name": "Bus Terminal Masjid",
+      "source_url": "https://praysalat.com/mosque/sylhet/76416-bus-terminal-masjid",
+      "coordinate_source": "plus-code",
+      "reference": "VVMC+7RV",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-77891",
+      "name": "Teroratan Jame Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/77891-teroratan-jame-mosque-sylhet",
+      "coordinate_source": "source-linked-map",
+      "reference": "https://www.google.com/maps/dir/?api=1&destination=24.886563,91.890812",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-77892",
+      "name": "Tultikor Jame Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/77892-tultikor-jame-mosque-sylhet",
+      "coordinate_source": "plus-code",
+      "reference": "VVMX+5HJ",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-77894",
+      "name": "Lake City Jame Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/77894-lake-city-jame-mosque-sylhet",
+      "coordinate_source": "plus-code",
+      "reference": "WR4V+3Q9",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-77896",
+      "name": "Elashkandi Jame Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/77896-elashkandi-jame-mosque-sylhet",
+      "coordinate_source": "plus-code",
+      "reference": "WV8C+8C9",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-77897",
+      "name": "Forest Colony Jame Masjid",
+      "source_url": "https://praysalat.com/mosque/sylhet/77897-forest-colony-jame-masjid",
+      "coordinate_source": "source-linked-map",
+      "reference": "https://www.google.com/maps/dir/?api=1&destination=24.890188,91.852438",
+      "decision": "added"
+    },
+    {
+      "candidate": "Jame Mosque",
+      "decision": "excluded-generic-name",
+      "source_url": "https://praysalat.com/mosque/sylhet/77898-jame-mosque"
+    },
+    {
+      "id": "dir-praysalat-78219",
+      "name": "Lovely Road Jame Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/78219-lovely-road-jame-mosque-sylhet",
+      "coordinate_source": "source-linked-map",
+      "reference": "https://www.google.com/maps/dir/?api=1&destination=24.908687,91.854438",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-78221",
+      "name": "Mojumdari Jame Masjid",
+      "source_url": "https://praysalat.com/mosque/sylhet/78221-mojumdari-jame-masjid",
+      "coordinate_source": "plus-code",
+      "reference": "WV5C+V52",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-78226",
+      "name": "Mendibagh Jame Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/78226-mendibagh-jame-mosque",
+      "coordinate_source": "source-linked-map",
+      "reference": "https://www.google.com/maps/dir/?api=1&destination=24.882188,91.883313",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-78231",
+      "name": "Mitali Para Jame Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/78231-mitali-para-jame-mosque-sylhet",
+      "coordinate_source": "source-linked-map",
+      "reference": "https://www.google.com/maps/dir/?api=1&destination=24.904187,91.888437",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-78233",
+      "name": "Hatimbug Jame Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/78233-hatimbug-jame-mosque",
+      "coordinate_source": "source-linked-map",
+      "reference": "https://www.google.com/maps/dir/?api=1&destination=24.893813,91.895938",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-78234",
+      "name": "Kodomtoli Central Jame Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/78234-kodomtoli-central-jame-mosque-sylhet",
+      "coordinate_source": "plus-code",
+      "reference": "VVGH+X9H",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-78235",
+      "name": "Jhalopara Central Jame Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/78235-jhalopara-central-jame-mosque-sylhet",
+      "coordinate_source": "plus-code",
+      "reference": "VVMF+V97",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-78236",
+      "name": "Raynagar Rajbari Jame Masjid",
+      "source_url": "https://praysalat.com/mosque/sylhet/78236-raynagar-rajbari-jame-masjid",
+      "coordinate_source": "source-linked-map",
+      "reference": "https://www.google.com/maps/dir/?api=1&destination=24.903312,91.886687",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-78239",
+      "name": "Hazrat Umar RA Jame Masjid",
+      "source_url": "https://praysalat.com/mosque/sylhet/78239-hazrat-umar-ra-jame-masjid",
+      "coordinate_source": "plus-code",
+      "reference": "VV99+6H5",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-78240",
+      "name": "Agpara Jame Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/78240-agpara-jame-mosque",
+      "coordinate_source": "plus-code",
+      "reference": "VVWJ+HJF",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-78245",
+      "name": "Londoni Road Jame Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/78245-londoni-road-jame-mosque-sylhet",
+      "coordinate_source": "plus-code",
+      "reference": "WV65+X6J",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-78248",
+      "name": "Gupshohor Jame Mosque And Madrasha",
+      "source_url": "https://praysalat.com/mosque/sylhet/78248-gupshohor-jame-mosque-and-madrasha",
+      "coordinate_source": "plus-code",
+      "reference": "VRPQ+Q48",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-78249",
+      "name": "Housing Estate 6th Lane Jame Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/78249-housing-estate-6th-lane-jame-mosque-sylhet",
+      "coordinate_source": "source-linked-map",
+      "reference": "https://www.google.com/maps/dir/?api=1&destination=24.910688,91.867437",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-78250",
+      "name": "Dhofadeeghi City Corporation Jame Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/78250-dhofadeeghi-city-corporation-jame-mosque-sylhet",
+      "coordinate_source": "plus-code",
+      "reference": "VVVG+8FX",
+      "decision": "added"
+    },
+    {
+      "candidate": "Sylhet Agricultural University Mosque",
+      "decision": "matched-existing",
+      "id": "osm-N6067775599",
+      "source_url": "https://praysalat.com/mosque/sylhet/78252-sylhet-agricultural-university-mosque"
+    },
+    {
+      "id": "dir-praysalat-78253",
+      "name": "Sadipur Jame Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/78253-sadipur-jame-mosque",
+      "coordinate_source": "plus-code",
+      "reference": "VVXW+CR7",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-78254",
+      "name": "Tilagor Central Jame Masjid",
+      "source_url": "https://praysalat.com/mosque/sylhet/78254-tilagor-central-jame-masjid",
+      "coordinate_source": "source-linked-map",
+      "reference": "https://www.google.com/maps/dir/?api=1&destination=24.896187,91.899438",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-78255",
+      "name": "Tuker Bazar Shahi Eidgah Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/78255-tuker-bazar-shahi-eidgah-mosque",
+      "coordinate_source": "plus-code",
+      "reference": "WR88+4PW",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-78256",
+      "name": "Tajpur Jame Masjid",
+      "source_url": "https://praysalat.com/mosque/sylhet/78256-tajpur-jame-masjid",
+      "coordinate_source": "plus-code",
+      "reference": "WR28+6W8",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-78257",
+      "name": "Akhaliya Chandiala Boro Jame Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/78257-akhaliya-chandiala-boro-jame-mosque-sylhet",
+      "coordinate_source": "source-linked-map",
+      "reference": "https://www.google.com/maps/dir/?api=1&destination=24.923687,91.841562",
+      "decision": "added"
+    },
+    {
+      "id": "dir-praysalat-78258",
+      "name": "Housing Central Jame Mosque",
+      "source_url": "https://praysalat.com/mosque/sylhet/78258-housing-central-jame-mosque-sylhet",
+      "coordinate_source": "plus-code",
+      "reference": "WVW6+6X4",
+      "decision": "added"
+    },
+    {
+      "id": "local-jherjhery-para-jame-mosjid",
+      "decision": "added",
+      "name": "Jherjhery Para Jame Mosjid",
+      "source_url": "https://mosjid.info/districts-of-bangladesh/sylhet-district/",
+      "coordinate_source": "not-established",
+      "reference": null
+    },
+    {
+      "id": "local-north-kajitula-jame-masjid",
+      "decision": "added",
+      "name": "North Kajitula Jame Masjid",
+      "source_url": "https://mosjid.info/districts-of-bangladesh/sylhet-district/",
+      "coordinate_source": "not-established",
+      "reference": null
+    },
+    {
+      "id": "local-kazitula-ucha-sarok-jame-masjid",
+      "decision": "added",
+      "name": "Kazitula Ucha Sarok Jame Masjid",
+      "source_url": "https://mosjid.info/districts-of-bangladesh/sylhet-district/",
+      "coordinate_source": "not-established",
+      "reference": null
+    },
+    {
+      "id": "local-jhornarpar-jame-masjid",
+      "decision": "added",
+      "name": "Jhornarpar Jame Masjid",
+      "source_url": "https://mosjid.info/districts-of-bangladesh/sylhet-district/",
+      "coordinate_source": "not-established",
+      "reference": null
+    },
+    {
+      "candidate": "Dhopa Dighirpar Jame Mosque",
+      "decision": "held-possible-duplicate",
+      "source_url": "https://mosjid.info/districts-of-bangladesh/sylhet-district/"
+    },
+    {
+      "id": "local-chondanitula-jame-masjid",
+      "decision": "added",
+      "name": "Chondanitula Jame Masjid",
+      "source_url": "https://mosjid.info/districts-of-bangladesh/sylhet-district/",
+      "coordinate_source": "not-established",
+      "reference": null
+    },
+    {
+      "id": "local-dorjipara-jame-mosjid",
+      "decision": "added",
+      "name": "Dorjipara Jame Mosjid",
+      "source_url": "https://mosjid.info/districts-of-bangladesh/sylhet-district/",
+      "coordinate_source": "not-established",
+      "reference": null
+    },
+    {
+      "candidate": "Mojumdar Para Mosque",
+      "decision": "held-possible-duplicate",
+      "source_url": "https://mosjid.info/districts-of-bangladesh/sylhet-district/"
+    },
+    {
+      "id": "local-senpara-jam-e-masjid",
+      "decision": "added",
+      "name": "Senpara Jam E Masjid",
+      "source_url": "https://mosjid.info/districts-of-bangladesh/sylhet-district/",
+      "coordinate_source": "not-established",
+      "reference": null
+    },
+    {
+      "id": "local-akbari-jame-masjid",
+      "decision": "added",
+      "name": "Akbari Jame Masjid",
+      "source_url": "https://mosjid.info/districts-of-bangladesh/sylhet-district/",
+      "coordinate_source": "not-established",
+      "reference": null
+    },
+    {
+      "candidate": "Hatimbug Jame Masjid",
+      "decision": "held-possible-duplicate",
+      "source_url": "https://mosjid.info/districts-of-bangladesh/sylhet-district/"
+    },
+    {
+      "id": "local-shadipur-notun-masjid",
+      "decision": "added",
+      "name": "Shadipur Notun Masjid",
+      "source_url": "https://mosjid.info/districts-of-bangladesh/sylhet-district/",
+      "coordinate_source": "not-established",
+      "reference": null
+    },
+    {
+      "id": "local-mouchak-jame-masjid",
+      "decision": "added",
+      "name": "Mouchak Jame Masjid",
+      "source_url": "https://mosjid.info/districts-of-bangladesh/sylhet-district/",
+      "coordinate_source": "not-established",
+      "reference": null
+    },
+    {
+      "id": "local-sobujbag-mosjid",
+      "decision": "added",
+      "name": "Sobujbag Mosjid",
+      "source_url": "https://mosjid.info/districts-of-bangladesh/sylhet-district/",
+      "coordinate_source": "not-established",
+      "reference": null
+    },
+    {
+      "id": "local-dohor-jame-masjid",
+      "decision": "added",
+      "name": "Dohor Jame Masjid",
+      "source_url": "https://mosjid.info/districts-of-bangladesh/sylhet-district/",
+      "coordinate_source": "not-established",
+      "reference": null
+    },
+    {
+      "id": "local-stadium-market-masjid",
+      "decision": "added",
+      "name": "Stadium Market Masjid",
+      "source_url": "https://sg.trip.com/travel-guide/attraction/sylhet-sadar-upazila/stadium-market-masjid-141519431",
+      "coordinate_source": "plus-code",
+      "reference": "VVX7+4MQ"
+    },
+    {
+      "id": "local-sylhet-plaza-mosque",
+      "decision": "added",
+      "name": "Sylhet Plaza Mosque",
+      "source_url": "https://halaman-kuning.cybo.com/BD/sylhet/masjid",
+      "coordinate_source": "plus-code",
+      "reference": "VVW9+783"
+    },
+    {
+      "id": "local-red-crescent-maternity-hospital-mosque",
+      "decision": "added",
+      "name": "Red Crescent Maternity Hospital Mosque",
+      "source_url": "https://halaman-kuning.cybo.com/BD/sylhet/masjid",
+      "coordinate_source": "plus-code",
+      "reference": "VVX9+75G"
+    },
+    {
+      "id": "local-sylhet-health-divisional-mosque",
+      "decision": "added",
+      "name": "Sylhet Health Divisional Mosque",
+      "source_url": "https://halaman-kuning.cybo.com/BD/sylhet/masjid",
+      "coordinate_source": "plus-code",
+      "reference": "WV29+CGJ"
+    },
+    {
+      "id": "local-masjid-markas",
+      "decision": "added",
+      "name": "Masjid Markas",
+      "source_url": "https://halaman-kuning.cybo.com/BD/sylhet/masjid",
+      "coordinate_source": "plus-code",
+      "reference": "VVXC+P2M"
+    },
+    {
+      "id": "local-shorok-o-jonopod-masjid",
+      "decision": "added",
+      "name": "Shorok o Jonopod Masjid",
+      "source_url": "https://halaman-kuning.cybo.com/BD/sylhet/masjid",
+      "coordinate_source": "not-established",
+      "reference": null
+    },
+    {
+      "id": "local-ambarkhana-colony-jame-masjid",
+      "decision": "added",
+      "name": "Ambarkhana Colony Jame Masjid",
+      "source_url": "https://prayersconnect.com/mosques/5029226-ambarkhana-colony-jame-masjid-sylhet-sylhet-division-bangladesh",
+      "coordinate_source": "plus-code",
+      "reference": "WV5C+785"
+    },
+    {
+      "id": "local-kazirbazar-makhon-jame-mosque",
+      "decision": "added",
+      "name": "Kazirbazar Makhon Jame Mosque",
+      "source_url": "https://viewsbangladesh.com/eid-congregation-held-in-sylhet/",
+      "coordinate_source": "not-established",
+      "reference": null
+    },
+    {
+      "candidate": "Osmani Medical College campus mosque",
+      "decision": "held-possible-duplicate",
+      "source_url": "https://somc.college.gov.bd/pages/static-pages/69661fbca31054345f1079ac"
+    },
+    {
+      "id": "local-al-marjan-shopping-complex-prayer-space",
+      "decision": "added",
+      "name": "Al-Marjan Shopping Complex Mosque",
+      "source_url": "https://www.ucb.com.bd/reports/cards/important-information/eid-ul-adha-discountlist.pdf",
+      "coordinate_source": "not-established",
+      "reference": null
+    },
+    {
+      "id": "city-hazi-abdul-mukit-jame-mosjid",
+      "name": "Hazi Abdul Mukit Jame Mosjid",
+      "decision": "added",
+      "source_url": "https://halaman-kuning.cybo.com/BD/sylhet/masjid",
+      "reference": "VVXC+83J"
+    },
+    {
+      "id": "city-karagar-jame-masjid",
+      "name": "Karagar Jame Masjid",
+      "decision": "added",
+      "source_url": "https://halaman-kuning.cybo.com/BD/sylhet/masjid",
+      "reference": "VVWF+39H"
+    },
+    {
+      "id": "city-hazrat-mojlish-ameen-jame-mosque",
+      "name": "Hazrat Mojlish Ameen Jame Mosque",
+      "decision": "added",
+      "source_url": "https://halaman-kuning.cybo.com/BD/sylhet/masjid",
+      "reference": "VVXG+9PJ"
+    },
+    {
+      "id": "city-syed-bari-jame-masjid",
+      "name": "Syed Bari Jame Masjid",
+      "decision": "added",
+      "source_url": "https://halaman-kuning.cybo.com/BD/sylhet/masjid?p=2",
+      "reference": "VVV9+XFG"
+    },
+    {
+      "id": "city-kazi-jalal-uddin-jame-mosque",
+      "name": "Kazi Jalal Uddin Jame Mosque",
+      "decision": "added",
+      "source_url": "https://halaman-kuning.cybo.com/BD/sylhet/masjid?p=2",
+      "reference": "WV3F+JFH"
+    },
+    {
+      "id": "city-baitus-sunnah-jame-masjid",
+      "name": "Baitus Sunnah Jame Masjid",
+      "decision": "added",
+      "source_url": "https://halaman-kuning.cybo.com/BD/sylhet/masjid?p=2",
+      "reference": null
+    },
+    {
+      "id": "city-riaz-ullah-wakaf-estate-jame-masjid",
+      "name": "Riaz Ullah Wakaf Estate Jame Masjid",
+      "decision": "added",
+      "source_url": "https://halaman-kuning.cybo.com/BD/sylhet/masjid?p=2",
+      "reference": "WV4G+774"
+    },
+    {
+      "id": "city-medical-colony-mosque",
+      "name": "Medical Colony Mosque",
+      "decision": "added",
+      "source_url": "https://halaman-kuning.cybo.com/BD/sylhet/masjid?p=2",
+      "reference": "VVX7+WFX"
+    },
+    {
+      "id": "city-municipal-shopping-center-panjegana-mosque",
+      "name": "Municipal Shopping Center Panjegana Mosque",
+      "decision": "added",
+      "source_url": "https://halaman-kuning.cybo.com/BD/sylhet/masjid?p=3",
+      "reference": "VVRF+PV2"
+    },
+    {
+      "id": "city-hawker-market-mosque",
+      "name": "Hawker Market Mosque",
+      "decision": "added",
+      "source_url": "https://halaman-kuning.cybo.com/BD/sylhet/masjid?p=3",
+      "reference": "VVQC+WQW"
+    },
+    {
+      "id": "city-baitul-azeem-jame-masjid",
+      "name": "Baitul Azeem Jame Masjid",
+      "decision": "added",
+      "source_url": "https://halaman-kuning.cybo.com/BD/sylhet/masjid?p=3",
+      "reference": "WV59+767"
+    },
+    {
+      "id": "city-telihaor-jame-masjid",
+      "name": "Telihaor Jame Masjid",
+      "decision": "added",
+      "source_url": "https://halaman-kuning.cybo.com/BD/sylhet/masjid?p=3",
+      "reference": "VVR8+95W"
+    },
+    {
+      "id": "city-hazrat-shahchot-mosque",
+      "name": "Hazrat Shahchot Mosque",
+      "decision": "added",
+      "source_url": "https://halaman-kuning.cybo.com/BD/sylhet/masjid?p=3",
+      "reference": "VVQC+8MX"
+    },
+    {
+      "id": "city-baitun-nur-jame-masjid-jherjheri-para",
+      "name": "Baitun Nur Jame Masjid, Jherjheri Para",
+      "decision": "added",
+      "source_url": "https://halaman-kuning.cybo.com/BD/sylhet/masjid?p=3",
+      "reference": "WV2M+R9H"
+    },
+    {
+      "id": "city-guaitula-puraton-jame-mosque",
+      "name": "Guaitula Puraton Jame Mosque",
+      "decision": "added",
+      "source_url": "https://halaman-kuning.cybo.com/BD/sylhet/masjid?p=3",
+      "reference": "WV5F+WVM"
+    },
+    {
+      "id": "city-goaitola-mosque",
+      "name": "Goaitola Mosque",
+      "decision": "added",
+      "source_url": "https://halaman-kuning.cybo.com/BD/sylhet/masjid?p=3",
+      "reference": "WV5H+M34"
+    },
+    {
+      "id": "city-mirabazar-dadapir-dargah-mosque",
+      "name": "Mirabazar Dadapir Dargah Mosque",
+      "decision": "added",
+      "source_url": "https://halaman-kuning.cybo.com/BD/sylhet/masjid?p=3",
+      "reference": "VVWM+VHH"
+    },
+    {
+      "id": "city-noyapara-central-jame-mosque",
+      "name": "Noyapara Central Jame Mosque",
+      "decision": "added",
+      "source_url": "https://halaman-kuning.cybo.com/BD/sylhet/masjid?p=4",
+      "reference": "VVW5+MPQ"
+    },
+    {
+      "id": "city-lamabazar-police-fari-jame-mosque",
+      "name": "Lamabazar Police Fari Jame Mosque",
+      "decision": "added",
+      "source_url": "https://halaman-kuning.cybo.com/BD/sylhet/masjid?p=4",
+      "reference": "VVV6+R28"
+    },
+    {
+      "id": "city-lamabazar-billpar-jame-mosque",
+      "name": "Lamabazar Billpar Jame Mosque",
+      "decision": "added",
+      "source_url": "https://halaman-kuning.cybo.com/BD/sylhet/masjid?p=4",
+      "reference": "VVW5+3FP"
+    },
+    {
+      "id": "city-khewapara-jame-mosque",
+      "name": "Khewapara Jame Mosque",
+      "decision": "added",
+      "source_url": "https://halaman-kuning.cybo.com/BD/sylhet/masjid?p=4",
+      "reference": "WV35+GGF"
+    },
+    {
+      "id": "city-mohammad-rukon-jame-mosjid",
+      "name": "Mohammad Rukon Jame Mosjid",
+      "decision": "added",
+      "source_url": "https://halaman-kuning.cybo.com/BD/sylhet/masjid?p=4",
+      "reference": "VVX5+H4C"
+    },
+    {
+      "id": "city-shagordighir-par-ellahi-jame-mosque",
+      "name": "Shagordighir Par Ellahi Jame Mosque",
+      "decision": "added",
+      "source_url": "https://halaman-kuning.cybo.com/BD/sylhet/masjid?p=4",
+      "reference": "WV35+WMV"
+    },
+    {
+      "id": "osm-W539207630",
+      "decision": "matched-existing",
+      "candidate": "city-kazi-jalal-uddin-jame-mosque",
+      "source_url": "https://halaman-kuning.cybo.com/BD/sylhet/masjid?p=2"
+    },
+    {
+      "id": "city-kuarpar-jame-mosque",
+      "decision": "added",
+      "source_url": "https://www.cybo.com/BD-biz/kuarpar-jame-mosque-%D9%85%D8%B3%D8%AC%D8%AF",
+      "reference": "VVV5+GJF"
+    },
+    {
+      "id": "city-aliya-madrasha-jame-mosque",
+      "decision": "added",
+      "source_url": "https://www.cybo.com/BD-biz/aliya-madrasha-jame-mosque-sylhet",
+      "reference": "WV29+33C"
+    },
+    {
+      "id": "city-jalalabad-prothom-masjid",
+      "decision": "added",
+      "source_url": "https://www.cybo.com/BD-biz/jalalabad-prothom-masjid-%D9%85%D8%B3%D8%AC%D8%AF",
+      "reference": null
+    }
+  ],
+  "total_count": 166,
+  "mapped_count": 151,
+  "address_only_count": 15
+}

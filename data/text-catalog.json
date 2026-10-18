@@ -1,0 +1,836 @@
+[
+  {
+    "key": "Reports could not load. The built-in mosque directory is still available. Retry to check times.",
+    "bn": "তথ্য আনা যায়নি। সংরক্ষিত মসজিদের তালিকা দেখানো হচ্ছে। সময় জানতে আবার চেষ্টা করুন।",
+    "en": "Reports could not load. The built-in mosque directory is still available. Retry to check times.",
+    "section": "Main page and help"
+  },
+  {
+    "key": "This browser could not save your favourites.",
+    "bn": "এই ব্রাউজারে সংরক্ষণ করা যায়নি।",
+    "en": "This browser could not save your favourites.",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Location is unavailable. Search by name instead.",
+    "bn": "এই ব্রাউজারে অবস্থান জানা যাচ্ছে না। নাম দিয়ে খুঁজুন।",
+    "en": "Location is unavailable. Search by name instead.",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Distances are straight-line estimates.",
+    "bn": "দূরত্ব সরলরেখায় দেখানো হচ্ছে।",
+    "en": "Distances are straight-line estimates.",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Could not get your location. Allow location access or search by name.",
+    "bn": "অবস্থান পাওয়া যায়নি। অনুমতি দিন অথবা নাম দিয়ে খুঁজুন।",
+    "en": "Could not get your location. Allow location access or search by name.",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Nearest mosques",
+    "bn": "কাছাকাছি মসজিদ",
+    "en": "Nearest mosques",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Sign in with Google",
+    "bn": "Google দিয়ে সাইন ইন",
+    "en": "Sign in with Google",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Skip to content",
+    "bn": "মূল অংশে যান",
+    "en": "Skip to content",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Home",
+    "bn": "প্রথম পাতা",
+    "en": "Home",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Mosque congregation times",
+    "bn": "মসজিদের জামাতের সময়",
+    "en": "Mosque congregation times",
+    "section": "Main page and help"
+  },
+  {
+    "key": "About & help",
+    "bn": "ব্যবহারবিধি",
+    "en": "About & help",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Sylhet",
+    "bn": "সিলেট",
+    "en": "Sylhet",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Bangladesh time",
+    "bn": "বাংলাদেশ সময়",
+    "en": "Bangladesh time",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Retry",
+    "bn": "আবার চেষ্টা",
+    "en": "Retry",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Dismiss message",
+    "bn": "বার্তা বন্ধ করুন",
+    "en": "Dismiss message",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Search mosques",
+    "bn": "মসজিদ খুঁজুন",
+    "en": "Search mosques",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Search mosque or area",
+    "bn": "মসজিদ বা এলাকার নাম লিখুন",
+    "en": "Search mosque or area",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Clear search",
+    "bn": "খোঁজা মুছুন",
+    "en": "Clear search",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Near me",
+    "bn": "আমার কাছাকাছি",
+    "en": "Near me",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Add a mosque",
+    "bn": "মসজিদ যোগ করুন",
+    "en": "Add a mosque",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Locality",
+    "bn": "এলাকা",
+    "en": "Locality",
+    "section": "Main page and help"
+  },
+  {
+    "key": "All localities",
+    "bn": "সব এলাকা",
+    "en": "All localities",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Return to locality groups",
+    "bn": "এলাকা অনুযায়ী দেখুন",
+    "en": "Return to locality groups",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Choose a prayer",
+    "bn": "নামাজ বেছে নিন",
+    "en": "Choose a prayer",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Saved",
+    "bn": "আমার তালিকা",
+    "en": "Saved",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Has reports",
+    "bn": "সময় আছে",
+    "en": "Has reports",
+    "section": "Main page and help"
+  },
+  {
+    "key": "List",
+    "bn": "তালিকা",
+    "en": "List",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Map",
+    "bn": "মানচিত্র",
+    "en": "Map",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Mosque list",
+    "bn": "মসজিদের তালিকা",
+    "en": "Mosque list",
+    "section": "Main page and help"
+  },
+  {
+    "key": "mosques",
+    "bn": "টি মসজিদ",
+    "en": "mosques",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Nearest first",
+    "bn": "দূরত্ব অনুযায়ী",
+    "en": "Nearest first",
+    "section": "Main page and help"
+  },
+  {
+    "key": "By locality · alphabetical",
+    "bn": "এলাকা অনুযায়ী · নামের ক্রমে",
+    "en": "By locality · alphabetical",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Loading the latest reports…",
+    "bn": "সর্বশেষ তথ্য আনা হচ্ছে…",
+    "en": "Loading the latest reports…",
+    "section": "Main page and help"
+  },
+  {
+    "key": "No mosques found",
+    "bn": "কোনো মসজিদ পাওয়া যায়নি",
+    "en": "No mosques found",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Try another name or clear the filters.",
+    "bn": "অন্য নাম লিখুন অথবা ফিল্টার সরান।",
+    "en": "Try another name or clear the filters.",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Clear filters",
+    "bn": "ফিল্টার সরান",
+    "en": "Clear filters",
+    "section": "Main page and help"
+  },
+  {
+    "key": "km",
+    "bn": "কিমি",
+    "en": "km",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Report times",
+    "bn": "সময় জানান",
+    "en": "Report times",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Details",
+    "bn": "বিস্তারিত",
+    "en": "Details",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Mosque details",
+    "bn": "মসজিদের তথ্য",
+    "en": "Mosque details",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Back to list",
+    "bn": "তালিকায় ফিরুন",
+    "en": "Back to list",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Unsave mosque",
+    "bn": "তালিকা থেকে সরান",
+    "en": "Unsave mosque",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Save mosque",
+    "bn": "আমার তালিকায় রাখুন",
+    "en": "Save mosque",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Directions",
+    "bn": "পথ দেখুন",
+    "en": "Directions",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Map source",
+    "bn": "তথ্যের উৎস",
+    "en": "Map source",
+    "section": "Main page and help"
+  },
+  {
+    "key": "These are congregation times, not the start of the prayer window.",
+    "bn": "এগুলো জামাতের সময়। নামাজের ওয়াক্ত শুরুর সময় নয়।",
+    "en": "These are congregation times, not the start of the prayer window.",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Conflict",
+    "bn": "অমিল",
+    "en": "Conflict",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Unknown",
+    "bn": "জানা নেই",
+    "en": "Unknown",
+    "section": "Listings"
+  },
+  {
+    "key": "Checked",
+    "bn": "দেখেছেন",
+    "en": "Checked",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Report jamaat times",
+    "bn": "জামাতের সময় জানান",
+    "en": "Report jamaat times",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Suggest a name or location correction",
+    "bn": "নাম বা অবস্থান ঠিক করুন",
+    "en": "Suggest a name or location correction",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Reports",
+    "bn": "জমা দেওয়া তথ্য",
+    "en": "Reports",
+    "section": "Main page and help"
+  },
+  {
+    "key": "No timetable has been reported for this mosque yet.",
+    "bn": "এই মসজিদের সময় এখনও কেউ জানাননি।",
+    "en": "No timetable has been reported for this mosque yet.",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Published",
+    "bn": "প্রকাশিত",
+    "en": "Published",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Pending review",
+    "bn": "পর্যালোচনাধীন",
+    "en": "Pending review",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Not published",
+    "bn": "প্রকাশ করা হয়নি",
+    "en": "Not published",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Reported by: ",
+    "bn": "জানিয়েছেন: ",
+    "en": "Reported by: ",
+    "section": "Listings"
+  },
+  {
+    "key": "Name not provided",
+    "bn": "নাম দেওয়া হয়নি",
+    "en": "Name not provided",
+    "section": "Listings"
+  },
+  {
+    "key": "Checked: ",
+    "bn": "দেখেছেন: ",
+    "en": "Checked: ",
+    "section": "Listings"
+  },
+  {
+    "key": "Reported through: ",
+    "bn": "প্রযোজ্য শেষ দিন: ",
+    "en": "Reported through: ",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Submitted: ",
+    "bn": "জমা: ",
+    "en": "Submitted: ",
+    "section": "Listings"
+  },
+  {
+    "key": "confirmed today",
+    "bn": "জন আজ নিশ্চিত করেছেন",
+    "en": "confirmed today",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Your attendance confirmation is saved.",
+    "bn": "আজকের উপস্থিতি নিশ্চিত করা হয়েছে।",
+    "en": "Your attendance confirmation is saved.",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Sign in to confirm attendance.",
+    "bn": "নিশ্চিত করতে সাইন ইন করুন।",
+    "en": "Sign in to confirm attendance.",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Prayed at this time today",
+    "bn": "আজ এই সময়ে পড়েছি",
+    "en": "Prayed at this time today",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Evidence explanation: ",
+    "bn": "তথ্যের বিবরণ: ",
+    "en": "Evidence explanation: ",
+    "section": "Main page and help"
+  },
+  {
+    "key": "View timetable photo",
+    "bn": "সময়সূচির ছবি দেখুন",
+    "en": "View timetable photo",
+    "section": "Main page and help"
+  },
+  {
+    "key": "This report has been flagged and needs review.",
+    "bn": "এই তথ্য নিয়ে আপত্তি এসেছে। যাচাই চলছে।",
+    "en": "This report has been flagged and needs review.",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Flag an incorrect time",
+    "bn": "ভুল সময় জানান",
+    "en": "Flag an incorrect time",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Sign in to report or confirm a time.",
+    "bn": "তথ্য দিতে বা নিশ্চিত করতে সাইন ইন করুন।",
+    "en": "Sign in to report or confirm a time.",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Back to mosque",
+    "bn": "মসজিদে ফিরুন",
+    "en": "Back to mosque",
+    "section": "Main page and help"
+  },
+  {
+    "key": "After signing in, choose this mosque again.",
+    "bn": "সাইন ইন করার পর আবার মসজিদটি বেছে নিন।",
+    "en": "After signing in, choose this mosque again.",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Report saved. It will be visible to everyone after review.",
+    "bn": "তথ্য জমা হয়েছে। যাচাইয়ের পর সবার জন্য দেখা যাবে।",
+    "en": "Report saved. It will be visible to everyone after review.",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Back",
+    "bn": "ফিরুন",
+    "en": "Back",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Suggest a missing mosque",
+    "bn": "মসজিদ যোগ করার অনুরোধ",
+    "en": "Suggest a missing mosque",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Correct mosque information",
+    "bn": "মসজিদের তথ্য সংশোধন",
+    "en": "Correct mosque information",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Your suggestion is saved for review.",
+    "bn": "অনুরোধ জমা হয়েছে। পর্যালোচনার অপেক্ষায় আছে।",
+    "en": "Your suggestion is saved for review.",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Mosque name",
+    "bn": "মসজিদের নাম",
+    "en": "Mosque name",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Bangla name (optional)",
+    "bn": "বাংলা নাম (যদি থাকে)",
+    "en": "Bangla name (optional)",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Area",
+    "bn": "এলাকা",
+    "en": "Area",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Search the list first to avoid duplicates. Enter the mosque’s latitude and longitude from its map location.",
+    "bn": "মানচিত্রে মসজিদের অবস্থানের অক্ষাংশ ও দ্রাঘিমাংশ লিখুন। নাম দেওয়ার আগে তালিকায় খুঁজে দেখুন।",
+    "en": "Search the list first to avoid duplicates. Enter the mosque’s latitude and longitude from its map location.",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Latitude",
+    "bn": "অক্ষাংশ",
+    "en": "Latitude",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Longitude",
+    "bn": "দ্রাঘিমাংশ",
+    "en": "Longitude",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Explain the change",
+    "bn": "বিস্তারিত জানান",
+    "en": "Explain the change",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Do not include phone numbers or personal information.",
+    "bn": "ফোন নম্বর বা ব্যক্তিগত তথ্য দেবেন না।",
+    "en": "Do not include phone numbers or personal information.",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Submitting…",
+    "bn": "জমা হচ্ছে…",
+    "en": "Submitting…",
+    "section": "Reports"
+  },
+  {
+    "key": "Submit for review",
+    "bn": "পর্যালোচনার জন্য জমা দিন",
+    "en": "Submit for review",
+    "section": "Reports"
+  },
+  {
+    "key": "Back to mosques",
+    "bn": "মসজিদের তালিকায় ফিরুন",
+    "en": "Back to mosques",
+    "section": "Main page and help"
+  },
+  {
+    "key": "How to use this directory",
+    "bn": "যেভাবে ব্যবহার করবেন",
+    "en": "How to use this directory",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Check the date beside a time",
+    "bn": "সময়ের পাশে তারিখ দেখুন",
+    "en": "Check the date beside a time",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Jamaat times differ between mosques. People report times they have checked. Confirm with the mosque before travelling, even when a report is recent.",
+    "bn": "জামাতের সময় মসজিদভেদে বদলায়। এখানে মানুষ নিজের দেখা সময় জানান। সাম্প্রতিক তথ্যও যাওয়ার আগে মসজিদে মিলিয়ে নিন।",
+    "en": "Jamaat times differ between mosques. People report times they have checked. Confirm with the mosque before travelling, even when a report is recent.",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Fajr and Maghrib reports are marked for a fresh check after 3 days, and other prayers after 7 days. Expired reports are labelled separately. These are the app’s caution thresholds, not mosque rules.",
+    "bn": "ফজর ও মাগরিবের তথ্য ৩ দিন পর, অন্য নামাজের তথ্য ৭ দিন পর আবার যাচাই করার চিহ্ন পায়। রিপোর্টের মেয়াদ শেষ হলে তা আলাদা করে দেখানো হয়। এগুলো এই অ্যাপের সতর্কতার নিয়ম।",
+    "en": "Fajr and Maghrib reports are marked for a fresh check after 3 days, and other prayers after 7 days. Expired reports are labelled separately. These are the app’s caution thresholds, not mosque rules.",
+    "section": "Main page and help"
+  },
+  {
+    "key": "What to report",
+    "bn": "কোন তথ্য দেবেন",
+    "en": "What to report",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Report from a timetable, mosque staff, or your own attendance. Fill only the prayers you know. For Jummah, enter the congregation start, not the start of the talk.",
+    "bn": "সময়সূচি দেখে, মসজিদের দায়িত্বশীলের কাছে জেনে বা জামাতে অংশ নিয়ে সময় জানান। শুধু জানা নামাজের সময় দিন। জুমার ক্ষেত্রে জামাত শুরুর সময় দিন, বয়ান শুরুর সময় নয়।",
+    "en": "Report from a timetable, mosque staff, or your own attendance. Fill only the prayers you know. For Jummah, enter the congregation start, not the start of the talk.",
+    "section": "Main page and help"
+  },
+  {
+    "key": "What a confirmation means",
+    "bn": "নিশ্চিত করা মানে কী",
+    "en": "What a confirmation means",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Confirm only if you attended today at that time. You cannot confirm your own report. Confirmation counts are not votes or a guarantee.",
+    "bn": "কেবল আজ ওই সময়ে জামাতে অংশ নিলে নিশ্চিত করুন। নিজের তথ্য নিজে নিশ্চিত করা যায় না। সংখ্যাটি ভোট বা নিশ্চয়তার সনদ নয়।",
+    "en": "Confirm only if you attended today at that time. You cannot confirm your own report. Confirmation counts are not votes or a guarantee.",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Directory coverage",
+    "bn": "মসজিদের তালিকা",
+    "en": "Directory coverage",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Mosques are grouped by locality. Search by mosque or locality name.",
+    "bn": "তালিকায় এলাকার ভিত্তিতে মসজিদ সাজানো আছে। নাম বা এলাকার নাম লিখে খুঁজতে পারেন।",
+    "en": "Mosques are grouped by locality. Search by mosque or locality name.",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Download the sourced mosque directory",
+    "bn": "মসজিদের উৎসসহ তালিকা ডাউনলোড",
+    "en": "Download the sourced mosque directory",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Photos and privacy",
+    "bn": "ছবি ও ব্যক্তিগত তথ্য",
+    "en": "Photos and privacy",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Upload only timetable photos, without people, animals, phone numbers or personal information. Photos are reviewed before publication. Your email is not shown to visitors. Sign-in identity is used to limit misuse. Your location is used in your browser to calculate distance. Loading map tiles sends requests to OpenStreetMap.",
+    "bn": "শুধু সময়সূচির ছবি দিন। মানুষ, প্রাণী, ফোন নম্বর বা ব্যক্তিগত তথ্য যেন না থাকে। ছবি পর্যালোচনার পর প্রকাশ পায়। আপনার ইমেইল অন্যদের দেখানো হয় না। সাইন ইন পরিচয় রিপোর্টের অপব্যবহার কমাতে ব্যবহৃত হয়। অবস্থান শুধু আপনার ব্রাউজারে দূরত্ব হিসাব করতে ব্যবহৃত হয়। মানচিত্র দেখতে OpenStreetMap-এ অনুরোধ যায়।",
+    "en": "Upload only timetable photos, without people, animals, phone numbers or personal information. Photos are reviewed before publication. Your email is not shown to visitors. Sign-in identity is used to limit misuse. Your location is used in your browser to calculate distance. Loading map tiles sends requests to OpenStreetMap.",
+    "section": "Main page and help"
+  },
+  {
+    "key": "To request removal, flag the relevant report and explain that you submitted it. The moderator can withdraw reports and their photos from public view.",
+    "bn": "তথ্য সরানোর অনুরোধ করতে সংশ্লিষ্ট রিপোর্টে ভুল জানান। মূল রিপোর্টের লেখক হিসেবে চিহ্নিত করুন। ছবি ও রিপোর্ট পর্যালোচক সরাতে পারেন।",
+    "en": "To request removal, flag the relevant report and explain that you submitted it. The moderator can withdraw reports and their photos from public view.",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Add to your phone",
+    "bn": "ফোনে রাখুন",
+    "en": "Add to your phone",
+    "section": "Main page and help"
+  },
+  {
+    "key": "On Android, choose Install app or Add to Home screen from the browser menu. On iPhone, use Safari’s Share menu and Add to Home Screen. Times and maps require an internet connection.",
+    "bn": "Android-এ ব্রাউজারের মেনু থেকে Install app বা Add to Home screen বেছে নিন। iPhone-এ Safari-এর Share মেনু থেকে Add to Home Screen বেছে নিন। সময় ও মানচিত্র দেখতে ইন্টারনেট লাগবে।",
+    "en": "On Android, choose Install app or Add to Home screen from the browser menu. On iPhone, use Safari’s Share menu and Add to Home Screen. Times and maps require an internet connection.",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Help & privacy",
+    "bn": "ব্যবহারবিধি ও গোপনীয়তা",
+    "en": "Help & privacy",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Please report incorrect information",
+    "bn": "তথ্য ভুল হলে জানান",
+    "en": "Please report incorrect information",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Your management page",
+    "bn": "আপনার পরিচালনা পাতা",
+    "en": "Your management page",
+    "section": "Main page and help"
+  },
+  {
+    "key": "en",
+    "bn": "bn",
+    "en": "en",
+    "section": "Main page and help"
+  },
+  {
+    "key": "bn",
+    "bn": "en",
+    "en": "bn",
+    "section": "Main page and help"
+  },
+  {
+    "key": "বাংলা",
+    "bn": "English",
+    "en": "বাংলা",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Choose a photo smaller than 15 MB.",
+    "bn": "ছবি ১৫ MB-এর ছোট হতে হবে।",
+    "en": "Choose a photo smaller than 15 MB.",
+    "section": "Reports"
+  },
+  {
+    "key": "Choose a JPG, PNG or WebP image.",
+    "bn": "JPG, PNG বা WebP ছবি দিন।",
+    "en": "Choose a JPG, PNG or WebP image.",
+    "section": "Reports"
+  },
+  {
+    "key": "Crop the photo and try again.",
+    "bn": "ছবি ছোট করে আবার দিন।",
+    "en": "Crop the photo and try again.",
+    "section": "Reports"
+  },
+  {
+    "key": "Enter only the times you know. Leave unknown prayers blank.",
+    "bn": "যে সময়গুলো জানেন শুধু সেগুলো দিন। না জানা ঘর খালি রাখুন।",
+    "en": "Enter only the times you know. Leave unknown prayers blank.",
+    "section": "Reports"
+  },
+  {
+    "key": "Your public contributor name",
+    "bn": "আপনার নাম (সবার কাছে দেখা যাবে)",
+    "en": "Your public contributor name",
+    "section": "Reports"
+  },
+  {
+    "key": "I agree to display this name with the report",
+    "bn": "এই নামটি রিপোর্টের সঙ্গে প্রকাশ করতে সম্মত",
+    "en": "I agree to display this name with the report",
+    "section": "Reports"
+  },
+  {
+    "key": "Extra Jummah fields are for the second and third congregations. Do not enter the talk’s start time.",
+    "bn": "জুমার অতিরিক্ত ঘরগুলো দ্বিতীয় ও তৃতীয় জামাতের জন্য। বয়ান শুরুর সময় দেবেন না।",
+    "en": "Extra Jummah fields are for the second and third congregations. Do not enter the talk’s start time.",
+    "section": "Reports"
+  },
+  {
+    "key": "When did you check?",
+    "bn": "কবে সময়টি দেখেছেন?",
+    "en": "When did you check?",
+    "section": "Reports"
+  },
+  {
+    "key": "Applies through which date?",
+    "bn": "কোন দিন পর্যন্ত প্রযোজ্য?",
+    "en": "Applies through which date?",
+    "section": "Reports"
+  },
+  {
+    "key": "If you do not know the end date, keep the checked date. Do not guess.",
+    "bn": "শেষ দিন জানা না থাকলে দেখার দিনই রাখুন। অনুমান করবেন না।",
+    "en": "If you do not know the end date, keep the checked date. Do not guess.",
+    "section": "Reports"
+  },
+  {
+    "key": "How did you check?",
+    "bn": "কীভাবে জেনেছেন?",
+    "en": "How did you check?",
+    "section": "Reports"
+  },
+  {
+    "key": "Timetable photo (optional)",
+    "bn": "সময়সূচির ছবি (ঐচ্ছিক)",
+    "en": "Timetable photo (optional)",
+    "section": "Reports"
+  },
+  {
+    "key": "Photograph only the timetable, without people, animals or private details. The image is resized in your browser.",
+    "bn": "শুধু বোর্ডের ছবি দিন। মানুষ, প্রাণী বা ব্যক্তিগত তথ্য রাখবেন না। ছবি ব্রাউজারে ছোট করা হয়।",
+    "en": "Photograph only the timetable, without people, animals or private details. The image is resized in your browser.",
+    "section": "Reports"
+  },
+  {
+    "key": "Preparing photo…",
+    "bn": "ছবি প্রস্তুত হচ্ছে…",
+    "en": "Preparing photo…",
+    "section": "Reports"
+  },
+  {
+    "key": "Remove",
+    "bn": "সরান",
+    "en": "Remove",
+    "section": "Reports"
+  },
+  {
+    "key": "How did you check this information?",
+    "bn": "তথ্য কীভাবে যাচাই করেছেন?",
+    "en": "How did you check this information?",
+    "section": "Reports"
+  },
+  {
+    "key": "If there is no photo, explain where and how you checked the time.",
+    "bn": "ছবি না দিলে কোথায় ও কীভাবে সময় জেনেছেন তা লিখুন।",
+    "en": "If there is no photo, explain where and how you checked the time.",
+    "section": "Reports"
+  },
+  {
+    "key": "Note (optional)",
+    "bn": "অতিরিক্ত তথ্য (ঐচ্ছিক)",
+    "en": "Note (optional)",
+    "section": "Reports"
+  },
+  {
+    "key": "Reports and photos are reviewed before publication.",
+    "bn": "প্রকাশের আগে তথ্য ও ছবি পর্যালোচনা করা হবে।",
+    "en": "Reports and photos are reviewed before publication.",
+    "section": "Reports"
+  },
+  {
+    "key": "Not submitted. Your entries are preserved. ",
+    "bn": "জমা হয়নি। লেখা রাখা আছে। ",
+    "en": "Not submitted. Your entries are preserved. ",
+    "section": "Reports"
+  },
+  {
+    "key": "Jamaat times",
+    "bn": "জামাতের সময়",
+    "en": "Jamaat times",
+    "section": "Listings"
+  },
+  {
+    "key": "Applies through: ",
+    "bn": "প্রযোজ্য শেষ দিন: ",
+    "en": "Applies through: ",
+    "section": "Listings"
+  },
+  {
+    "key": "Timetable photo",
+    "bn": "সময়সূচির ছবি",
+    "en": "Timetable photo",
+    "section": "Listings"
+  },
+  {
+    "key": "Reporter’s explanation",
+    "bn": "রিপোর্টদাতার বিবরণ",
+    "en": "Reporter’s explanation",
+    "section": "Listings"
+  },
+  {
+    "key": "No photo or explanation provided.",
+    "bn": "ছবি বা বিবরণ দেওয়া হয়নি।",
+    "en": "No photo or explanation provided.",
+    "section": "Listings"
+  },
+  {
+    "key": "No times have been reported for this mosque yet.",
+    "bn": "এই মসজিদের সময় এখনও কেউ জানাননি।",
+    "en": "No times have been reported for this mosque yet.",
+    "section": "Listings"
+  },
+  {
+    "key": "Map of mosques in Sylhet",
+    "bn": "সিলেটের মসজিদের মানচিত্র",
+    "en": "Map of mosques in Sylhet",
+    "section": "Map"
+  },
+  {
+    "key": "Some map tiles could not load. You can still use the mosque list.",
+    "bn": "মানচিত্রের কিছু অংশ আসেনি। তালিকা থেকে মসজিদ বেছে নিন।",
+    "en": "Some map tiles could not load. You can still use the mosque list.",
+    "section": "Map"
+  },
+  {
+    "key": "Select a marker to view a mosque",
+    "bn": "মসজিদ বেছে নিতে চিহ্নে চাপুন",
+    "en": "Select a marker to view a mosque",
+    "section": "Map"
+  }
+]

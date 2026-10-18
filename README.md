@@ -1,126 +1,94 @@
-# vinext-starter
+# Sylhet Jamat
 
-A clean full-stack starter running on [vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and Drizzle support.
+Sylhet mosque jamaat directory with community reports, timetable photos and a separate owner management page. Green-and-white interface, Bangla and English, locality groups, map, saved mosques and all six prayer fields. The directory contains 166 entries.
 
-## Prerequisites
+## Deployment status
 
-- Node.js `>=22.13.0`
-- Portable: Windows, macOS, or Linux; no Bash required
-- Managed Linux: managed Linux runtime with Bash, `flock`, `curl`, `sha256sum`, and GNU `timeout`
-- Git is required only for publishing
+Prepared for independent Cloudflare Workers hosting. The code builds and can run with local D1/R2 storage. A production Cloudflare account and Google OAuth credentials must be connected before the independent public deployment can be verified. The placeholder database ID in `wrangler.jsonc` is replaced by the setup script after account authorization.
 
-## Sites Lifecycle
+The original GitHub upload contained only 16 root files. Missing app folders were restored from the working project built in this chat. No redesign or static-only conversion was performed.
 
-The Sites initializer copies the shared starter and selects managed-linux only when `SITES_MANAGED_LINUX_CONTAINER=1`; otherwise it selects portable. It saves the selection only in ignored `.sites-runtime/execution-profile.json`. Both profiles copy/configure first, then use the plugin's separate `install-dependencies.mjs` step to measure installation independently. Edit source under `app/` and follow the Sites skill for installation, preview, builds, and publishing.
+## Why there is no root index.html
 
-Run `node <plugin-root>/scripts/configure-execution-profile.mjs` only when the profile is unknown for the current checkout and environment. Profile changes do not alter tracked source or require reinstalling otherwise-valid dependencies; restart an existing preview to use the new selection. Do not commit or upload `.sites-runtime/`.
+This is a React app using Vinext 1.0.0-beta.5, Vite 8 and Next.js-style App Router modules. The `/` page is `app/page.tsx`, management is `app/manage/page.tsx`, and server endpoints are in `app/api/[...path]/route.ts`. The build generates a Worker and browser assets under `dist/server` and `dist/client`.
 
-This starter does not use `wrangler.jsonc`.
+ChatGPT previously supplied hosting, trusted sign-in identity, D1 and R2 bindings. Uploading the source to GitHub does not provide those services. GitHub Pages serves static files and cannot execute the report, moderation, settings, authentication or upload APIs. Creating an index.html would not solve this.
 
-`install:ci` runs `npm ci` once against the shared lockfile, disables parent-workspace discovery, and includes required dev/optional dependencies despite production/omit settings. Sharp defaults to prebuilt binaries unless explicitly configured otherwise. Do not overlap installers.
+## Selected hosting
 
-- **Portable:** Preserve host HOME, npm cache, registry, proxy, temporary paths, retry/concurrency settings, and lifecycle-script policy. Use `--prefer-offline --no-audit --no-fund`.
-- **Managed Linux:** Use the existing project-local HOME/cache/tmp setup and Linux install lock, tarball preflight, and timeout. Restore the image-seeded npm cache only when its lockfile hash matches; retain network fallback. Builds keep their existing timeout. These helpers are not invoked by the portable profile.
+Cloudflare Workers hosts both the existing frontend and server routes. Cloudflare D1 stores reports, confirmations, suggestions, directory changes, settings and audit records. Private R2 storage holds timetable photos. Photos remain accessible through the existing permission-checked API, not a public bucket. Sign-in uses Google OAuth and signed HTTP-only cookies. Account email is not displayed publicly.
 
-`scripts/sites-env.mjs` preserves the caller's HOME, npm cache, proxy, XDG, and temporary-directory configuration while defaulting Wrangler and Miniflare state to the checkout. If npm reports an unwritable cache, select a writable path with `npm_config_cache` for that install. The `dev` and `start` scripts also keep Wrangler logs inside the checkout. Generated `.sites-runtime/` and `.wrangler/` directories are disposable and ignored by Git.
+A free workers.dev URL is sufficient. A purchased domain is optional. Keep the Workers Free plan initially; the app must fit its limits. Do not activate a paid plan without reviewing the limits below.
 
-On portable, `npm run dev` uses `vinext dev` with HMR, starting at port 5173. Vinext records the running server in ignored `.vinext/` state, rejects an ordinary duplicate launch, and recovers stale state after a stopped process; exactly simultaneous starts can race. Pass `--port <port>` or `--hostname <host>` after `npm run dev --` when needed; keep portable previews on loopback.
+## Account setup needed once
 
-For browser QA on managed Linux, use `sites-preview start`. The project's dev script runs Vite and accepts the supervisor's `--host 0.0.0.0 --port 4173 --strictPort` arguments. The internal browser uses `http://terminal.local:4173/`; it is not a user-facing URL. The supervisor owns the preview lifecycle. The ignored local profile survives the supervisor's cleared process environment.
+1. Create or sign into your Cloudflare account. In Workers & Pages, choose your account's free workers.dev subdomain. Enable R2 if it is not already available. Cloudflare may require a payment method for R2 activation; check the account screen before accepting. The project does not buy a domain or upgrade your plan.
+2. Create a scoped Cloudflare API token for this account with **Workers Scripts: Edit**, **Workers R2 Storage: Edit**, **D1: Edit**, and **Account Settings: Read**. These support deployment, database/bucket setup and discovering the workers.dev subdomain. Do not use a global API key.
+3. Create a Google OAuth **Web application** client using the Google Auth Platform console. Use External audience, add your support/contact email, request only `openid` and `email`, and add this authorized redirect URI: `https://sylhet-jamat.YOUR-WORKERS-SUBDOMAIN.workers.dev/api/auth/callback`. The subdomain comes from step 1. For initial testing, add your Google account as a test user. Switch the OAuth app to production before general community use; Google may require additional consent-screen setup.
+4. In this existing GitHub repository, open **Settings > Secrets and variables > Actions > Secrets**. Add:
 
-The portable profile simulates ChatGPT sign-in only for loopback development requests. Visit `/signin-with-chatgpt?return_to=/` to sign in as `local_seedy` (`seedy@sites.test`, display name `Seedy`) and `/signout-with-chatgpt?return_to=/` to sign out. The development cookie preserves that identity across server restarts. Mock auth is disabled in the managed-linux profile and is not included in production builds; hosted authentication remains dispatch-owned.
+| Secret | Value |
+| --- | --- |
+| `CLOUDFLARE_ACCOUNT_ID` | Your Cloudflare account ID |
+| `CLOUDFLARE_API_TOKEN` | The scoped token from step 2 |
+| `GOOGLE_CLIENT_ID` | Google Web application client ID |
+| `GOOGLE_CLIENT_SECRET` | Google client secret |
+| `AUTH_SECRET` | At least 32 securely random characters, fixed across deploys |
+| `ADMIN_EMAIL` | The Google email allowed to manage mosques and publish reports |
 
-The Worker uses `vinext/server/fetch-handler`, including Vinext's config-aware image handling. After building, `npm start` runs that Worker locally through Wrangler on `127.0.0.1`, sharing `.wrangler/state` with dev preview and local D1 migrations; it does not deploy the site or simulate sign-in. Use the URL printed by the server. Pass `npm start -- --port <port>` to select a different built-preview port.
+Generate an AUTH_SECRET locally with `node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"`. Keep the result in GitHub Secrets, not source code or chat.
 
-Local previews use Miniflare's placeholder `Request.cf` metadata without a network lookup. Set `CLOUDFLARE_CF_FETCH_ENABLED=true` to opt into fetching preview metadata; this setting does not change hosted request metadata.
+5. Under **Actions > Variables**, add `DEPLOY_ENABLED` with value `true`. Leave `PUBLIC_ORIGIN` unset for the workers.dev address. Then open **Actions > Check and deploy Sylhet Jamat > Run workflow** on `main`.
 
-Local tool usage metrics are disabled by default. Set `WRANGLER_SEND_METRICS=true` to opt in.
+The workflow checks the app, creates or reuses the named D1 database and R2 bucket, sets the real database binding in its build checkout, applies outstanding migrations, deploys the Worker, installs the runtime secrets and checks the public routes. It does not erase an existing database. Deployment is disabled until DEPLOY_ENABLED is explicitly set, so incomplete account configuration does not publish a broken app by accident.
 
-## Included Shape
+Do not configure Cloudflare Builds as a second deployment pipeline while this GitHub Actions workflow is active. One pipeline owns database migrations and releases.
 
-- edit site code under `app/`
-- `app/chatgpt-auth.ts` provides optional dispatch-owned ChatGPT sign-in helpers
-- `.openai/hosting.json` declares optional Sites D1 and R2 bindings
-- `vite.config.ts` simulates declared bindings for local development
-- `db/index.ts` reads the D1 binding from the Cloudflare Worker environment
-- `db/schema.ts` starts intentionally empty
-- `@cloudflare/workers-types` provides Worker types; `cloudflare-env.d.ts` declares optional `DB`/`BUCKET` bindings—update these declarations if binding names change
-- `examples/d1/` contains an optional D1 example surface
-- `drizzle.config.ts` supports local migration generation when needed
+## Future edits
 
-## Workspace Auth Headers
+Push changes to `main`. GitHub Actions reruns checks and updates the same Worker after they pass, when DEPLOY_ENABLED is true and secrets are configured. Pull requests run checks but never deploy. In-app mosque, wording and disclaimer changes are saved in D1 from `/manage`; those do not require a GitHub commit and survive code releases.
 
-Signed-in visitors receive both `oai-authenticated-user-id` and `oai-authenticated-user-email`. Private Sites require every visitor to sign in; public Sites may also have anonymous visitors, for whom neither header is present.
+## Local commands
 
-The user ID is stable for the same user on the same Site and different across Sites. Use it as the durable user key; use email and name for display or contact purposes.
-
-SIWC-authenticated workspace sites may also receive `oai-authenticated-user-full-name` when the user's SIWC profile has a non-empty `name` claim. The full-name value is percent-encoded UTF-8 and is accompanied by `oai-authenticated-user-full-name-encoding: percent-encoded-utf-8`.
-
-Treat the full name as optional and fall back to email when it is absent:
-
-```tsx
-import { headers } from "next/headers";
-
-export default async function Home() {
-  const requestHeaders = await headers();
-  const userId = requestHeaders.get("oai-authenticated-user-id");
-  const email = requestHeaders.get("oai-authenticated-user-email");
-  const encodedFullName = requestHeaders.get("oai-authenticated-user-full-name");
-  const fullName =
-    encodedFullName &&
-    requestHeaders.get("oai-authenticated-user-full-name-encoding") ===
-      "percent-encoded-utf-8"
-      ? decodeURIComponent(encodedFullName)
-      : null;
-
-  const displayName = fullName ?? email;
-  // ...
-}
-```
-
-## Optional Dispatch-Owned ChatGPT Sign-In
-
-Import the ready-to-use helpers from `app/chatgpt-auth.ts` when the site needs optional or required ChatGPT sign-in:
-
-- Use `getChatGPTUser()` for optional signed-in UI.
-- Use the returned `userId` as the stable user key for user-owned records; do not use email as a durable identifier.
-- Use `requireChatGPTUser(returnTo)` for server-rendered pages that should send anonymous visitors through Sign in with ChatGPT.
-- In a Server Component, start sign-in with `<a href={chatGPTSignInPath(returnTo)} target="_top">`. The auth helper module is server-only; do not import it into a Client Component.
-- Do not use `fetch`, XHR, a client-side router, or a framework link that can prefetch the sign-in route. SIWC must start as a top-level navigation.
-- Never request the AuthAPI authorization endpoint directly. The dispatch-owned `/signin-with-chatgpt` route must start the SIWC flow.
-- Use `chatGPTSignOutPath(returnTo)` for browser sign-out links or actions.
-- Pass a same-origin relative `returnTo` path for the destination after sign-in or sign-out. The helper validates and safely encodes it.
-- Mark protected pages with `export const dynamic = "force-dynamic"` because they depend on per-request identity headers.
-
-Dispatch owns `/signin-with-chatgpt`, `/signout-with-chatgpt`, `/callback`, the OAuth cookies, and identity header injection. Do not implement app routes for those reserved paths. Routes that do not import and call the helper remain anonymous-compatible.
-
-SIWC establishes identity only; it does not prove workspace membership. Use the Sites hosting platform's access policy controls for workspace-wide restrictions, or enforce explicit server-side membership or allowlist checks.
-
-Use SIWC for account pages, user-specific dashboards, saved records, and write actions tied to the current ChatGPT user. Leave public content anonymous.
-
-## Local D1 migrations
-
-For a D1-backed local preview, generate SQL with `npm run db:generate`. Build once through the Sites skill's build entrypoint (or `npm run build` for standalone use) to generate `dist/server/wrangler.json`, rebuilding if bindings change. From the project root, apply each pending migration in order:
+Use Node 24 and pnpm 11.25.0 (the version in package.json).
 
 ```sh
-node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --local --config dist/server/wrangler.json --persist-to .wrangler/state --file drizzle/0000_example.sql
+pnpm install --frozen-lockfile
+cp .dev.vars.example .dev.vars
+pnpm db:migrate:local
+pnpm dev
 ```
 
-Replace the filename with the pending migration and `DB` with your D1 binding name if different. Use `.wrangler/state`, not `.wrangler/state/v3`; Wrangler adds the versioned directories. Do not replay migrations already applied locally. This updates only the preview database; publishing applies production migrations separately.
+Set real local OAuth credentials and the displayed localhost origin in `.dev.vars` to test sign-in. Never commit that file. There is no fake owner login.
 
-## Diagnostic Commands
+```sh
+pnpm typecheck
+pnpm test
+pnpm test:api
+pnpm build
+pnpm test:production
+pnpm deploy:check
+```
 
-- `npm run install:ci`: perform the one locked dependency install
-- `npm run dev`: start the Vite/Vinext development server
-- `npm run build`: build the deployable Sites artifact
-- `npm run start`: preview the built Worker locally with D1/R2 support
-- `npm run db:generate`: generate Drizzle migrations after schema changes
+`test:production` checks the actual compiled Worker using isolated local D1/R2 and asset storage. No production submissions are created.
 
-When using the Sites plugin, follow its skill instructions for installation, builds, and publishing. These npm commands remain available for standalone use.
+## Costs and limits checked 18 October 2026
 
-The portable build runs Vinext directly without a host `timeout` command. The managed-linux build uses `scripts/build-verified.sh` and its existing `SITES_BUILD_TIMEOUT` setting.
+- Workers Free: 100,000 dynamic requests/day and 10ms CPU time/invocation. Static-asset requests are free and unlimited. SSR or photo processing can exceed the CPU limit even at low traffic. Production CPU measurements need the real account. Paid Workers starts at USD 5/month plus usage.
+- D1 Free: 5 million rows read/day, 100,000 rows written/day, 5GB total storage. On the Free plan queries fail when daily limits are reached, until reset. Database size and indexed queries still matter.
+- R2 Standard allowance: 10GB-month storage, 1 million Class A and 10 million Class B operations/month. Storage beyond the allowance is USD 0.015/GB-month; operations beyond the included amounts are charged. Egress is free. R2 is not unlimited free storage.
+- GitHub Actions and Google OAuth are also subject to their account policies and quotas. This app requests no paid Google APIs. Billing activation or charges have not been authorized by these files.
 
-## Learn More
+Official references:
 
-- [vinext Documentation](https://github.com/cloudflare/vinext)
-- [Drizzle D1 Guide](https://orm.drizzle.team/docs/get-started/d1-new)
+- https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages
+- https://developers.cloudflare.com/workers/platform/pricing/
+- https://developers.cloudflare.com/d1/platform/pricing/
+- https://developers.cloudflare.com/r2/pricing/
+- https://developers.google.com/identity/protocols/oauth2/web-server
+
+## Data and remaining verification
+
+The original ChatGPT-hosted database and photos are separate from your own Cloudflare account. Source contains the mosque directory, not live user submissions. Export any records and photos you want to retain before moving the live community to another host. Do not treat the source ZIP as a live database backup.
+
+A real Google login, owner moderation, public timetable report and photo upload must be checked on the final host. Local mocked OAuth tests cannot prove Google consent-screen configuration. Browser/device visual testing and free-tier CPU measurements are still required. The local build and HTTP tests do not mean that an independent public deployment has already happened.

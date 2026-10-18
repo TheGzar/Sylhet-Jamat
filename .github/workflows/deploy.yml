@@ -1,0 +1,55 @@
+name: Check and deploy Sylhet Jamat
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: sylhet-jamat-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck
+      - run: pnpm test
+      - run: pnpm test:api
+      - run: pnpm build
+      - run: pnpm test:production
+      - run: pnpm deploy:check
+  deploy:
+    needs: check
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && vars.DEPLOY_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      AUTH_SECRET: ${{ secrets.AUTH_SECRET }}
+      ADMIN_EMAIL: ${{ secrets.ADMIN_EMAIL }}
+      GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+      GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+      PUBLIC_ORIGIN: ${{ vars.PUBLIC_ORIGIN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Check required configuration
+        run: node -e 'for (const k of ["CLOUDFLARE_API_TOKEN","CLOUDFLARE_ACCOUNT_ID","AUTH_SECRET","ADMIN_EMAIL","GOOGLE_CLIENT_ID","GOOGLE_CLIENT_SECRET"]) if (!process.env[k]) throw Error("Add GitHub Actions secret " + k)'
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm setup:cloudflare
+      - run: pnpm build
+      - run: pnpm db:migrate:remote
+      - run: pnpm deploy
+      - run: node scripts/push-runtime-secrets.mjs
+      - name: Verify public website
+        run: node scripts/verify-live.mjs

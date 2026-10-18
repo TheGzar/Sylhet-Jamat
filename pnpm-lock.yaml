@@ -117,6 +117,9 @@ importers:
       drizzle-kit:
         specifier: 0.31.10
         version: 0.31.10
+      esbuild:
+        specifier: 0.28.0
+        version: 0.28.0
       eslint:
         specifier: 9.39.4
         version: 9.39.4(jiti@2.7.0)(supports-color@10.2.2)
@@ -126,6 +129,9 @@ importers:
       json-rpc-2.0:
         specifier: 1.7.1
         version: 1.7.1
+      miniflare:
+        specifier: 4.20260515.0
+        version: 4.20260515.0(@types/node@22.19.19)
       raw-body:
         specifier: 3.0.2
         version: 3.0.2

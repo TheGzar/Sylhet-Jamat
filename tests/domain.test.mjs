@@ -1,0 +1,15 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {dhakaDate,validateReport,currentReport,canConfirm,cleanJpeg} from '../lib/prayers.ts';
+const valid={times:{fajr:['05:15'],jummah:['13:30','13:00']},observed:'2026-10-16',validUntil:'2026-10-20',source:'noticeboard',note:''};
+const report={id:'1',mosqueId:'m',...valid,created:'2026-10-16T00:00:00Z',status:'approved',photo:false};
+test('Dhaka date changes at 18:00 UTC',()=>assert.equal(dhakaDate(new Date('2026-10-17T18:01:00Z')),'2026-10-18'));
+test('reject future observations, impossible dates and long validity',()=>{for(const patch of [{observed:'2026-10-19'},{observed:'2026-02-30'},{validUntil:'2026-12-01'}])assert.throws(()=>validateReport({...valid,...patch},'2026-10-18'));});
+test('reject malformed time, empty report and daily multi-jamaat',()=>{for(const times of [{fajr:['25:00']},{},{fajr:['05:10','05:20']}])assert.throws(()=>validateReport({...valid,times},'2026-10-18'));});
+test('multiple Jummah times normalize in order',()=>assert.deepEqual(validateReport(valid,'2026-10-18').times.jummah,['13:00','13:30']));
+test('partial reports never replace other prayers with blanks',()=>{const newer={...report,id:'2',observed:'2026-10-17',times:{isha:['20:00']}};assert.equal(currentReport([report,newer],'m','fajr','2026-10-18').report.id,'1');});
+test('same observation day disagreements stay visible',()=>{const other={...report,id:'2',times:{fajr:['05:30']}};assert.equal(currentReport([report,other],'m','fajr','2026-10-18').state,'conflict');});
+test('newer observation beats later submission of old information',()=>{const older={...report,id:'2',observed:'2026-10-15',created:'2026-10-18T00:00:00Z'};assert.equal(currentReport([older,report],'m','fajr','2026-10-18').report.id,'1');});
+test('stale, expired and flagged statuses are distinct',()=>{assert.equal(currentReport([report],'m','fajr','2026-10-20').state,'old');assert.equal(currentReport([report],'m','fajr','2026-10-21').state,'expired');assert.equal(currentReport([{...report,flags:1}],'m','fajr','2026-10-18').state,'flagged');});
+test('unapproved reports never become public current times',()=>assert.equal(currentReport([{...report,status:'pending'}],'m','fajr','2026-10-18').report,null));
+test('attendance requires another author, elapsed time and Friday for Jummah',()=>{assert.equal(canConfirm(report,'fajr',true,new Date('2026-10-16T06:00Z')),false);assert.equal(canConfirm(report,'fajr',false,new Date('2026-10-15T22:00Z')),false);assert.equal(canConfirm(report,'jummah',false,new Date('2026-10-17T10:00Z')),false);assert.equal(canConfirm(report,'jummah',false,new Date('2026-10-16T08:00Z')),true);});
+test('reject non-JPEG and truncated uploads',()=>{assert.throws(()=>cleanJpeg(new Uint8Array([255,216])));assert.throws(()=>cleanJpeg(new TextEncoder().encode('<svg onload=alert(1)>')));});

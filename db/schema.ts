@@ -1,0 +1,9 @@
+import {sqliteTable,text,integer,primaryKey,index} from 'drizzle-orm/sqlite-core';
+export const reports=sqliteTable('reports',{id:text('id').primaryKey(),userId:text('user_id').notNull(),mosqueId:text('mosque_id').notNull(),times:text('times').notNull(),observed:text('observed').notNull(),validUntil:text('valid_until').notNull(),created:text('created').notNull(),source:text('source').notNull(),note:text('note').notNull(),status:text('status').notNull().default('pending'),photo:text('photo'),reviewNote:text('review_note'),authorName:text('author_name'),proofNote:text('proof_note')},t=>[index('report_mosque').on(t.mosqueId,t.status)]);
+export const confirmations=sqliteTable('confirmations',{reportId:text('report_id').notNull(),userId:text('user_id').notNull(),prayer:text('prayer').notNull(),date:text('date').notNull()},t=>[primaryKey({columns:[t.reportId,t.userId,t.prayer,t.date]})]);
+export const suggestions=sqliteTable('suggestions',{id:text('id').primaryKey(),userId:text('user_id').notNull(),kind:text('kind').notNull(),payload:text('payload').notNull(),created:text('created').notNull(),status:text('status').notNull().default('pending')});
+export const mosques=sqliteTable('mosques',{id:text('id').primaryKey(),name:text('name').notNull(),nameBn:text('name_bn').notNull(),lat:text('lat').notNull(),lon:text('lon').notNull(),area:text('area').notNull(),sourceUrl:text('source_url').notNull(),details:text('details')});
+export const limits=sqliteTable('limits',{key:text('key').primaryKey(),count:integer('count').notNull()});
+export const audit=sqliteTable('audit',{id:text('id').primaryKey(),userId:text('user_id').notNull(),action:text('action').notNull(),target:text('target').notNull(),created:text('created').notNull()});
+
+export const settings=sqliteTable('settings',{key:text('key').primaryKey(),value:text('value').notNull()});

@@ -1,0 +1,179 @@
+{
+  "titleBn": "সিলেটে জামাত",
+  "titleEn": "Sylhet Jamaat",
+  "headingBn": "কোন মসজিদে, কখন জামাত?",
+  "headingEn": "Find a mosque. Check its jamaat times.",
+  "introBn": "মসজিদ খুঁজুন, সর্বশেষ জানানো সময় দেখুন।",
+  "introEn": "Find a mosque and see its latest reported times.",
+  "noticeBn": "এখানে সাধারণ মুসল্লিদের জানানো জামাতের সময় দেখানো হয়। মসজিদে গিয়ে সময় ভিন্ন পেতে পারেন।",
+  "noticeEn": "Jamaat times are reported by worshippers. The time at the mosque may differ.",
+  "primaryColor": "#205d40",
+  "backgroundColor": "#f5f7f3",
+  "featuredMosqueId": "osm-W531388592",
+  "categories": [
+    {
+      "id": "central",
+      "name": "Bandar Bazar · Court Point",
+      "nameBn": "বন্দরবাজার · কোর্ট পয়েন্ট",
+      "order": 0
+    },
+    {
+      "id": "zindabazar-jallarpar",
+      "name": "Zindabazar · Jallarpar",
+      "nameBn": "জিন্দাবাজার · জল্লারপাড়",
+      "order": 1
+    },
+    {
+      "id": "chowhatta-dargah",
+      "name": "Chowhatta · Dargah",
+      "nameBn": "চৌহাট্টা · দরগাহ",
+      "order": 2
+    },
+    {
+      "id": "ambarkhana",
+      "name": "Ambarkhana · Dargah",
+      "nameBn": "আম্বরখানা · দরগাহ",
+      "order": 3
+    },
+    {
+      "id": "pirmoholla-housing",
+      "name": "Pirmoholla · Housing Estate · Mojumdari",
+      "nameBn": "পীরমহল্লা · হাউজিং এস্টেট · মজুমদারি",
+      "order": 4
+    },
+    {
+      "id": "lamabazar-sheikhghat",
+      "name": "Lamabazar · Sheikhghat",
+      "nameBn": "লামাবাজার · শেখঘাট",
+      "order": 5
+    },
+    {
+      "id": "sheikhghat",
+      "name": "Sheikhghat · Forest Colony",
+      "nameBn": "শেখঘাট · ফরেস্ট কলোনি",
+      "order": 6
+    },
+    {
+      "id": "kazitula-kumarpara",
+      "name": "Kazitula · Kumarpara",
+      "nameBn": "কাজীটুলা · কুমারপাড়া",
+      "order": 7
+    },
+    {
+      "id": "naiorpul-mirabazar",
+      "name": "Naiorpul · Mirabazar",
+      "nameBn": "নাইওরপুল · মিরাবাজার",
+      "order": 8
+    },
+    {
+      "id": "roy-nagar",
+      "name": "Roynagar · Rajbari",
+      "nameBn": "রায়নগর · রাজবাড়ি",
+      "order": 9
+    },
+    {
+      "id": "shonarpara",
+      "name": "Shonarpara",
+      "nameBn": "সোনারপাড়া",
+      "order": 10
+    },
+    {
+      "id": "shibganj-shonarpara-uposhahar",
+      "name": "Shibganj · Sobujbag",
+      "nameBn": "শিবগঞ্জ · সবুজবাগ",
+      "order": 11
+    },
+    {
+      "id": "uposhohor",
+      "name": "Shahjalal Uposhohor",
+      "nameBn": "শাহজালাল উপশহর",
+      "order": 12
+    },
+    {
+      "id": "bagbari-kajalshah",
+      "name": "Bagbari · Kajalshah",
+      "nameBn": "বাগবাড়ি · কাজলশাহ",
+      "order": 13
+    },
+    {
+      "id": "ghasitula",
+      "name": "Ghasitula · Kanishail · Khalopar",
+      "nameBn": "ঘাসিটুলা · কানিশাইল · খালপার",
+      "order": 14
+    },
+    {
+      "id": "pathantula-sagordighir-par",
+      "name": "Pathantula · Sagordighir Par",
+      "nameBn": "পাঠানটুলা · সাগরদিঘীর পাড়",
+      "order": 15
+    },
+    {
+      "id": "tilagor-majortila-islampur",
+      "name": "Tilagor · Majortila · Islampur",
+      "nameBn": "টিলাগড় · মেজরটিলা · ইসলামপুর",
+      "order": 16
+    },
+    {
+      "id": "kumargaon-sust",
+      "name": "Kumargaon · SUST",
+      "nameBn": "কুমারগাঁও · শাবিপ্রবি",
+      "order": 17
+    },
+    {
+      "id": "kadamtoli-railway-station",
+      "name": "Kadamtoli · Railway Station",
+      "nameBn": "কদমতলী · রেলস্টেশন",
+      "order": 18
+    },
+    {
+      "id": "gotatikor",
+      "name": "Gotatikor · South Surma",
+      "nameBn": "গোটাটিকর · দক্ষিণ সুরমা",
+      "order": 19
+    },
+    {
+      "id": "tultikor-kushighat",
+      "name": "Tultikor · Kushighat · Burhanabad",
+      "nameBn": "টুলটিকর · কুশিঘাট · বুরহানাবাদ",
+      "order": 20
+    },
+    {
+      "id": "south-surma-bodikuna-pirojpur-tetli",
+      "name": "South Surma: Bodikuna · Pirojpur · Tetli",
+      "nameBn": "দক্ষিণ সুরমা: বদিকোনা · পিরোজপুর · তেতলী",
+      "order": 21
+    },
+    {
+      "id": "kuchai",
+      "name": "Kuchai",
+      "nameBn": "কুচাই",
+      "order": 22
+    },
+    {
+      "id": "shah-paran-eastern-surroundings",
+      "name": "Shah Paran · eastern surroundings",
+      "nameBn": "শাহপরাণ · পূর্বাঞ্চল",
+      "order": 23
+    },
+    {
+      "id": "northern-surroundings",
+      "name": "Northern surroundings",
+      "nameBn": "উত্তরাঞ্চল",
+      "order": 24
+    },
+    {
+      "id": "western-surroundings",
+      "name": "Western surroundings",
+      "nameBn": "পশ্চিমাঞ্চল",
+      "order": 25
+    },
+    {
+      "id": "unassigned",
+      "name": "Other localities",
+      "nameBn": "অন্যান্য এলাকা",
+      "order": 26
+    }
+  ],
+  "contributeBn": "সম্ভব হলে মসজিদের সময়সূচির ছবি আপলোড করে দ্বীনের খেদমতে পাশে থাকুন।",
+  "contributeEn": "Please upload a mosque timetable photo when you can, to help others attend the jamaat."
+}

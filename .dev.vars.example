@@ -1,0 +1,7 @@
+# Copy to .dev.vars locally. Never commit the actual .dev.vars file.
+# For production, use the GitHub Actions secrets named in README.md.
+AUTH_SECRET=replace-with-at-least-32-random-characters
+ADMIN_EMAIL=your-owner-google-email@example.com
+GOOGLE_CLIENT_ID=your-google-oauth-client-id
+GOOGLE_CLIENT_SECRET=your-google-oauth-client-secret
+PUBLIC_ORIGIN=http://localhost:3000
