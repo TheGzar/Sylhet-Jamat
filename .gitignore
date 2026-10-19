@@ -37,21 +37,17 @@ yarn-error.log*
 # typescript
 next-env.d.ts
 
-# Maintained Vite plugin and worker sources.
-!/build/
-/build/*
-!/build/connector-preview-plugin.mjs
-!/build/connector-preview-worker.mjs
-!/build/sites-vite-plugin.LICENSE
-!/build/sites-vite-plugin.ts
-!/build/sites-worker.ts
-
+# Build and local runtime output
 /dist/
 /.wrangler/
-# Checkout-local execution profile and tool state; never publish them.
-/.sites-runtime/
-/.agents/
+/.test-runtime/
+/.pnpm-store/
+
+# Local workspace metadata
+/.openai/
 /.codex/
+/.agents/
+/.sites-runtime/
 /outputs/
 /work/
 

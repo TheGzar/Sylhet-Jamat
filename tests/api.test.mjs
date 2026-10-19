@@ -2,8 +2,8 @@ import {sessionToken,SESSION_COOKIE} from '../lib/auth.ts';
 import {build} from 'esbuild';
 import {Miniflare} from 'miniflare';
 import fs from 'node:fs/promises';import assert from 'node:assert/strict';import {dhakaDate} from '../lib/prayers.ts';
-await build({entryPoints:['tests/api-worker.ts'],bundle:true,outfile:'.sites-runtime/api-test.js',format:'esm',platform:'neutral',external:['cloudflare:workers'],tsconfig:'tsconfig.json'});
-const mf=new Miniflare({modules:true,scriptPath:'.sites-runtime/api-test.js',compatibilityDate:'2026-05-15',d1Databases:['DB'],r2Buckets:['BUCKET'],bindings:{ADMIN_EMAIL:'owner@example.test',AUTH_SECRET:'test-only-secret-at-least-32-characters-long'}});
+await build({entryPoints:['tests/api-worker.ts'],bundle:true,outfile:'.test-runtime/api-worker.js',format:'esm',platform:'neutral',external:['cloudflare:workers'],tsconfig:'tsconfig.json'});
+const mf=new Miniflare({modules:true,scriptPath:'.test-runtime/api-worker.js',compatibilityDate:'2026-05-15',d1Databases:['DB'],r2Buckets:['BUCKET'],bindings:{ADMIN_EMAIL:'owner@example.test',AUTH_SECRET:'test-only-secret-at-least-32-characters-long'}});
 const seedCount=JSON.parse(await fs.readFile('data/mosques.json','utf8')).length;let checks=0;
 try{
  const db=await mf.getD1Database('DB');for(const file of (await fs.readdir('drizzle')).filter(f=>f.endsWith('.sql')).sort())for(const sql of (await fs.readFile('drizzle/'+file,'utf8')).split('--> statement-breakpoint'))if(sql.trim())await db.prepare(sql).run();

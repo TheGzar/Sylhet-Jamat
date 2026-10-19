@@ -2,17 +2,15 @@
 
 Sylhet mosque jamaat directory with community reports, timetable photos and a separate owner management page. Green-and-white interface, Bangla and English, locality groups, map, saved mosques and all six prayer fields. The directory contains 166 entries.
 
-## Deployment status
+## Deployment
 
-Prepared for independent Cloudflare Workers hosting. The code builds and can run with local D1/R2 storage. A production Cloudflare account and Google OAuth credentials must be connected before the independent public deployment can be verified. The placeholder database ID in `wrangler.jsonc` is replaced by the setup script after account authorization.
+Deploy to Cloudflare Workers with D1 and R2. The code builds and can run with local D1/R2 storage. A production Cloudflare account and Google OAuth credentials must be connected before the independent public deployment can be verified. The placeholder database ID in `wrangler.jsonc` is replaced by the setup script after account authorization.
 
-The original GitHub upload contained only 16 root files. Missing app folders were restored from the working project built in this chat. No redesign or static-only conversion was performed.
-
-## Why there is no root index.html
+## Application structure
 
 This is a React app using Vinext 1.0.0-beta.5, Vite 8 and Next.js-style App Router modules. The `/` page is `app/page.tsx`, management is `app/manage/page.tsx`, and server endpoints are in `app/api/[...path]/route.ts`. The build generates a Worker and browser assets under `dist/server` and `dist/client`.
 
-ChatGPT previously supplied hosting, trusted sign-in identity, D1 and R2 bindings. Uploading the source to GitHub does not provide those services. GitHub Pages serves static files and cannot execute the report, moderation, settings, authentication or upload APIs. Creating an index.html would not solve this.
+The application requires a server runtime for reporting, moderation, settings, authentication and uploads. It cannot run as a static GitHub Pages site.
 
 ## Selected hosting
 
@@ -36,7 +34,7 @@ A free workers.dev URL is sufficient. A purchased domain is optional. Keep the W
 | `AUTH_SECRET` | At least 32 securely random characters, fixed across deploys |
 | `ADMIN_EMAIL` | The Google email allowed to manage mosques and publish reports |
 
-Generate an AUTH_SECRET locally with `node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"`. Keep the result in GitHub Secrets, not source code or chat.
+Generate an AUTH_SECRET locally with `node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"`. Store the result in GitHub Secrets.
 
 5. Under **Actions > Variables**, add `DEPLOY_ENABLED` with value `true`. Leave `PUBLIC_ORIGIN` unset for the workers.dev address. Then open **Actions > Check and deploy Sylhet Jamat > Run workflow** on `main`.
 
@@ -89,6 +87,6 @@ Official references:
 
 ## Data and remaining verification
 
-The original ChatGPT-hosted database and photos are separate from your own Cloudflare account. Source contains the mosque directory, not live user submissions. Export any records and photos you want to retain before moving the live community to another host. Do not treat the source ZIP as a live database backup.
+The source includes the mosque directory. Live reports and photo files are held separately in D1 and R2. Back up both before migrating hosting; a source download is not a live database backup.
 
 A real Google login, owner moderation, public timetable report and photo upload must be checked on the final host. Local mocked OAuth tests cannot prove Google consent-screen configuration. Browser/device visual testing and free-tier CPU measurements are still required. The local build and HTTP tests do not mean that an independent public deployment has already happened.

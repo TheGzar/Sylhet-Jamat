@@ -1,4 +1,11 @@
-# Sylhet Jamaat design
-White and deep green, inspired by a clear local directory rather than promotional landing pages. Seven explored structures: timetable board, ward register, route guide, library catalogue, community notice sheet, field notebook, city directory. Adopt the city directory structure, translated into the user's confirmed list-and-map layout. The design seed ran in degraded mode without external challengers. User selections and green/white brief govern.
-Mode: Operate. Bangla typography, readable names, simple outlines, tabular times, visible dates. A compact header, search, prayer filters, mosque list, actual map, and a mosque details panel. On phones the map is optional and the list remains usable. No photos except submitted timetable evidence. No living-being images, promotional hero, fabricated metrics or em dashes.
-Functional acceptance: find by name, choose mosque, understand unknown/stale/conflicting times, submit without losing work after an error, find pending report, review as owner. Human usability has not been tested.
+# Interface design
+
+The interface uses white and deep green, readable Bangla typography, simple controls and compact timetable rows. Wording stays plain and factual. Photographs are limited to submitted timetable evidence; the interface contains no images of living beings.
+
+The public page centres on finding a mosque and checking its reported jamaat times. Each listing shows locality, address, all six prayer fields and available report evidence. Kudrat Ullah appears first, followed by names grouped by locality and sorted alphabetically. Desktop users see a list and map; phone users can switch between them.
+
+Report dates, contributor names and evidence remain visible beside times. Unknown, old, expired and conflicting reports have distinct labels. No calculated prayer-window time is presented as a mosque's jamaat time.
+
+Owner controls are available separately at `/manage`. Text, disclaimer, locality groups, mosque details, map positions and colours can be edited without changing source code. Save status and failed submissions remain visible, and failed saves preserve entered text.
+
+Layouts must support narrow screens, keyboard navigation, visible focus and reduced-motion preferences. Device and accessibility checks are documented in the test report.

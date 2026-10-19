@@ -1,20 +1,22 @@
-# Product
-<!-- impeccable:product-schema 1 -->
-## Platform
-web
-## Users
-People in Sylhet looking for local mosque congregation times. Volunteer contributors and the owner maintain reports.
-## Product Purpose
-Find a mosque, see dated jamaat reports, submit a timetable, and confirm a time personally observed.
-## Operating Context
-Bangladesh time. Users may be on mobile with weak connectivity. Prayer start times are different from jamaat times.
-## Capabilities and Constraints
-Bangla first with English switch confirmed by user. Desktop list and map, mobile switch confirmed by user. Six prayers including Jummah. Photos optional. Data must persist. Moderation required before photos and reported times become visible. Directory completeness unverified. No invented times.
-## Brand Commitments
-Green and white. Simple wording. No em dashes. No images of living beings. Noncommercial, no marketing captions.
-## Evidence on Hand
-69 independently sourced OpenStreetMap locations. No verified jamaat timetables provided.
-## Product Principles
-Show uncertainty. Keep sources and dates visible. Make correction easy. Never interpret popularity as verification.
-## Open decisions
-Public launch requires local timetable collection and moderation owner. Initial deployment is private for review.
+# Sylhet Jamat
+
+A community-maintained directory of mosque congregation times in Sylhet. Visitors find mosques, compare dated jamaat reports and view timetable evidence. Contributors report information they checked; the owner reviews submissions before publication.
+
+## Core features
+
+- Bangla-first interface with an English option.
+- Mosque search, locality groups, map, directions and device-local saved mosques.
+- Fajr, Dhuhr, Asr, Maghrib, Isha and up to three Jummah congregations.
+- Public contributor name, observation date, submission date, validity and evidence.
+- Timetable photos, attendance confirmations, correction requests and moderation.
+- Owner editing for the directory, wording, disclaimer and colours.
+
+## Data principles
+
+Use reported jamaat times, not calculated prayer-window times. Leave unknown values empty. Keep dates and sources visible. Do not treat popularity or confirmation counts as proof. Make corrections straightforward and retain an audit history.
+
+The seed directory contains 166 entries. It is not a complete census, and map records do not establish an exact entrance or current access conditions. Local checks and timetable collection are ongoing responsibilities.
+
+## Operation
+
+The application uses Bangladesh time and supports mobile users on unreliable connections. Public browsing requires no account; contributions and owner management use Google sign-in. Current reports and maps require internet access. The project has no advertising, subscriptions or payments.

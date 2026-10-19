@@ -4,7 +4,7 @@ import {authRoute,identity,sessionToken,readPayload,signPayload,safeReturnTo,SES
 const secret='test-only-auth-secret-more-than-thirty-two-characters';
 const env={AUTH_SECRET:secret,PUBLIC_ORIGIN:'https://sylhet.example',GOOGLE_CLIENT_ID:'test-client',GOOGLE_CLIENT_SECRET:'test-client-secret',ADMIN_EMAIL:'owner@example.test'};
 const req=(path,headers={})=>new Request(env.PUBLIC_ORIGIN+path,{headers});
-test('forged ChatGPT headers cannot grant owner privileges',async()=>assert.deepEqual(await identity(req('/api/admin',{'oai-authenticated-user-id':'owner','oai-authenticated-user-email':'owner@example.test'}),env),{id:null,email:null,admin:false}));
+test('forged identity headers cannot grant owner privileges',async()=>assert.deepEqual(await identity(req('/api/admin',{'oai-authenticated-user-id':'owner','oai-authenticated-user-email':'owner@example.test'}),env),{id:null,email:null,admin:false}));
 test('valid signed session identifies the configured owner',async()=>{const token=await sessionToken('google:123','Owner@Example.test',secret);assert.equal((await identity(req('/api/admin',{cookie:SESSION_COOKIE+'='+token}),env)).admin,true)});
 test('tampered and expired sessions are rejected',async()=>{const token=await sessionToken('123','x@example.test',secret,0);assert.equal(await readPayload(token,secret,'session'),null);assert.equal(await readPayload(token+'x',secret,'session'),null)});
 test('wrong cookie purpose cannot create a session',async()=>{const token=await signPayload({purpose:'oauth',id:'123',email:'owner@example.test',iat:Date.now(),exp:Date.now()+10000},secret);assert.equal((await identity(req('/',{cookie:SESSION_COOKIE+'='+token}),env)).id,null)});

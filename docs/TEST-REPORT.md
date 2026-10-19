@@ -1,25 +1,28 @@
-# Independent deployment verification
+# Verification
 
-- Installed using pnpm 11.25.0 and the project lockfile.
-- 33 auth, prayer-domain and directory tests pass.
-- 44 API checks pass against isolated D1/R2 storage, using signed sessions.
-- Production build and TypeScript check pass.
-- Wrangler deployment dry run passes (about 323 KiB compressed Worker code).
-- The compiled Worker serves /, /manage, favicon, manifest, Bengali font, API directory and the JavaScript assets referenced by the page in local HTTP checks. Forged owner headers are rejected.
-- Production smoke tests use explicit bundled modules and a local assets router with has_user_worker enabled, matching a full-stack deployment.
-- Cloudflare deployment and real Google consent/login remain blocked on account credentials. No independent public URL has been verified.
-- Browser visual testing and free-tier CPU measurements remain unverified. The 10ms Workers Free CPU limit may require a paid plan; no plan upgrade is authorized or performed.
+## Automated checks
 
-## Original app checks
+- 33 authentication, prayer-domain and directory checks.
+- 44 API checks against isolated D1 and R2 storage.
+- TypeScript validation and production build.
+- Deployment dry run with the generated Worker configuration.
+- Compiled-application HTTP checks for the home page, management page, directory API, favicon, manifest, Bengali font and referenced JavaScript assets.
 
-# Verification, 18 October 2026
+Coverage includes signed sessions, tampered and expired cookies, OAuth state and PKCE, owner permissions, pending-report privacy, photo access, timetable selection, editable wording, coordinate validation and forged identity headers. Tests do not create production submissions.
 
-- 20 domain and directory tests pass.
-- 44 API checks pass against an isolated test database.
-- Coverage includes permissions, pending-report privacy, publication, photo access, named evidence, editable text persistence, invalid text keys, contrast validation, and address-only mosque editing without a fake pin.
-- 166 directory entries, 151 with source-based pins and 15 without coordinates.
-- Retained original OSM IDs when matching previously unnamed mosques. Directory sources and review decisions are in city-expansion-audit.json.
-- TypeScript and production build checked for this release.
-- Browser visual/interaction QA was unavailable in this environment. Phone map gestures, layout and uploads still need a real-device check before broad invitations.
+Run the checks with:
 
-No source’s calculated prayer-window times were imported as mosque jamaat times. No live submissions were created by tests.
+```sh
+pnpm typecheck
+pnpm test
+pnpm test:api
+pnpm build
+pnpm test:production
+pnpm deploy:check
+```
+
+## Live verification
+
+Production publishing needs the Cloudflare and Google credentials described in README.md. Local OAuth mocks do not verify the consent screen or real account login. Before community use, check owner sign-in, a timetable publication, a photo upload and withdrawal on the final host.
+
+Browser/device visual checks, accessibility testing and production CPU measurements remain outstanding. Workers Free has a 10ms CPU limit per invocation; a passing local build does not establish that every production request fits that limit.
