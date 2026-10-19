@@ -20,7 +20,8 @@
     "deploy": "wrangler deploy --config dist/server/wrangler.json",
     "deploy:check": "wrangler deploy --config dist/server/wrangler.json --dry-run",
     "setup:cloudflare": "node scripts/setup-cloudflare.mjs",
-    "test:production": "node tests/production-smoke.mjs"
+    "test:production": "node tests/production-smoke.mjs",
+    "guide:build": "node scripts/build-owner-guide.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

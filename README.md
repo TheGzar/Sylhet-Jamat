@@ -2,6 +2,10 @@
 
 Sylhet mosque jamaat directory with community reports, timetable photos and a separate owner management page. Green-and-white interface, Bangla and English, locality groups, map, saved mosques and all six prayer fields. The directory contains 166 entries.
 
+## Owner guide
+
+Start with the [complete owner guide](docs/OWNER-GUIDE.md) or open [the searchable offline guide](docs/OWNER-GUIDE.html). On the live site, your guide is under **/manage?tab=guide** after owner sign-in. It covers setup, everyday edits, reports, map positions, backups, troubleshooting and future releases.
+
 ## Deployment
 
 Deploy to Cloudflare Workers with D1 and R2. The code builds and can run with local D1/R2 storage. A production Cloudflare account and Google OAuth credentials must be connected before the independent public deployment can be verified. The placeholder database ID in `wrangler.jsonc` is replaced by the setup script after account authorization.
@@ -70,7 +74,7 @@ pnpm deploy:check
 
 `test:production` checks the actual compiled Worker using isolated local D1/R2 and asset storage. No production submissions are created.
 
-## Costs and limits checked 18 October 2026
+## Costs and limits checked 19 October 2026
 
 - Workers Free: 100,000 dynamic requests/day and 10ms CPU time/invocation. Static-asset requests are free and unlimited. SSR or photo processing can exceed the CPU limit even at low traffic. Production CPU measurements need the real account. Paid Workers starts at USD 5/month plus usage.
 - D1 Free: 5 million rows read/day, 100,000 rows written/day, 5GB total storage. On the Free plan queries fail when daily limits are reached, until reset. Database size and indexed queries still matter.

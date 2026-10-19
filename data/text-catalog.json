@@ -832,5 +832,41 @@
     "bn": "মসজিদ বেছে নিতে চিহ্নে চাপুন",
     "en": "Select a marker to view a mosque",
     "section": "Map"
+  },
+  {
+    "key": "You are viewing the visitor page",
+    "bn": "দর্শকের পাতা দেখছেন",
+    "en": "You are viewing the visitor page",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Edit text and disclaimer",
+    "bn": "লেখা ও নোট বদলান",
+    "en": "Edit text and disclaimer",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Edit mosques",
+    "bn": "মসজিদের তথ্য বদলান",
+    "en": "Edit mosques",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Sign in to submit your report.",
+    "bn": "সময় জমা দিতে সাইন ইন করুন।",
+    "en": "Sign in to submit your report.",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Search the list first. Add the locality and a nearby landmark. Coordinates are optional if you know the exact position.",
+    "bn": "আগে তালিকায় খুঁজে দেখুন। এলাকা ও কাছের পরিচিত স্থানের নাম লিখুন। সঠিক অবস্থান জানা থাকলে অক্ষাংশ ও দ্রাঘিমাংশ দিতে পারেন।",
+    "en": "Search the list first. Add the locality and a nearby landmark. Coordinates are optional if you know the exact position.",
+    "section": "Main page and help"
+  },
+  {
+    "key": "Sign out",
+    "bn": "সাইন আউট",
+    "en": "Sign out",
+    "section": "Main page and help"
   }
 ]

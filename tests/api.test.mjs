@@ -62,5 +62,25 @@ try{
  check((await call('directory',{...pinless,nameBn:pinless.name_bn,address:'Edited address'},owner)).status===200,'owner can edit an address without inventing a pin');
  check((await call('data',null,null)).data.mosques.find(m=>m.id===pinless.id).lat===null,'unset pin survives database roundtrip');
  check((await call('directory',{...pinless,lat:24.89,lon:''},owner)).status===400,'half completed coordinate pair rejected');
+
+ const noPinSuggestion=await call('suggestions',{kind:'mosque',name:'Address only mosque',area:'Central Sylhet',lat:'',lon:'',note:'Prayer room in the specified building'});
+ check(noPinSuggestion.status===201,'visitor can suggest a mosque without guessed coordinates');
+ check((await call('moderate',{type:'suggestion',id:noPinSuggestion.data.id,status:'approved',note:'Checked the address'},owner)).status===200,'owner can approve an address-only suggestion');
+ x=await call('data',null,null);const added=x.data.mosques.find(m=>m.id==='community-'+noPinSuggestion.data.id);
+ check(added.lat===null&&added.lon===null&&added.area==='Central Sylhet','approved address-only suggestion remains pinless');
+ check((await call('suggestions',{kind:'mosque',name:'Partial coordinate mosque',lat:'24.89',lon:'',note:'Check the position in this area'})).status===400,'suggestions reject half-completed coordinates');
+ const latest=(await call('data',null,null)).data.settings;
+ check((await call('settings',{...latest,categories:latest.categories.filter(c=>c.id!=='unassigned')},owner)).status===400,'Other localities stays available for new suggestions');
+ const emptyGroup={id:'empty-test-area',name:'Empty test area',nameBn:'খালি এলাকা',order:latest.categories.length};
+ check((await call('settings',{...latest,categories:[...latest.categories,emptyGroup]},owner)).status===200,'owner can add an empty locality');
+ check((await call('settings',latest,owner)).status===200,'owner can remove an empty locality');
+ check(!(await call('data',null,null)).data.settings.categories.some(c=>c.id==='empty-test-area'),'removed locality stays removed after a fresh read');
+ const misplaced='sheikhghat',destination='lamabazar-sheikhghat';
+ for(const mosque of (await call('admin',null,owner)).data.mosques.filter(m=>m.category_id===misplaced)){
+  const moved=await call('directory',{...mosque,nameBn:mosque.name_bn,category_id:destination},owner);assert.equal(moved.status,200);
+ }
+ const reduced={...latest,categories:latest.categories.filter(c=>c.id!==misplaced)};
+ check((await call('settings',reduced,owner)).status===200,'owner can remove an emptied original locality');
+ check(!(await call('data',null,null)).data.settings.categories.some(c=>c.id===misplaced),'removed original locality is not silently recreated');
  console.log(`Completed ${checks} API checks. Test database is isolated from production.`);
 }finally{await mf.dispose()}

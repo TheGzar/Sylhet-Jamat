@@ -8,7 +8,7 @@ export const dynamic='force-dynamic';
 const json=(v:unknown,status=200)=>Response.json(v,{status,headers:{'Cache-Control':'no-store','X-Content-Type-Options':'nosniff'}});
 
 function db(){if(!env.DB)throw Error('Database unavailable. Please try again later.');return env.DB;}
-async function settings(){const r:any=await db().prepare("SELECT value FROM settings WHERE key='site'").first();if(!r)return defaults;const saved=JSON.parse(r.value);const categories=[...(saved.categories||defaults.categories)];for(const c of defaults.categories)if(!categories.some((x:any)=>x.id===c.id))categories.push({...c,order:categories.length});return {...defaults,...saved,categories};}
+async function settings(){const r:any=await db().prepare("SELECT value FROM settings WHERE key='site'").first();if(!r)return defaults;const saved=JSON.parse(r.value);const categories=saved.categories||defaults.categories;return {...defaults,...saved,categories};}
 async function allMosques(){const rows=await db().prepare('SELECT * FROM mosques').all();const map=new Map<string,any>(seed.map(m=>[m.id,{...m,category_id:(m as any).category_id||'unassigned',sort_order:100,hidden:false}]));for(const r of rows.results as any[]){map.set(r.id,{category_id:'unassigned',sort_order:100,hidden:false,...(map.get(r.id)||{}),id:r.id,name:r.name,name_bn:r.name_bn,lat:r.lat===''?null:Number(r.lat),lon:r.lon===''?null:Number(r.lon),area:r.area,source_url:r.source_url,...(r.details?JSON.parse(r.details):{})});}return Array.from(map.values());}
 function report(r:any,uid:string|null){return {id:r.id,mosqueId:r.mosque_id,times:JSON.parse(r.times),observed:r.observed,validUntil:r.valid_until,created:r.created,source:r.source,note:r.note,status:r.status,photo:!!r.photo,authorName:r.author_name||'',proofNote:r.proof_note||'',mine:r.user_id===uid,reviewNote:r.review_note};}
 async function limit(uid:string,kind:string,max:number){const key=uid+':'+dhakaDate()+':'+kind;const r:any=await db().prepare('INSERT INTO limits(key,count) VALUES(?,1) ON CONFLICT(key) DO UPDATE SET count=count+1 RETURNING count').bind(key).first();if(r.count>max)throw Error('Daily limit reached. Please try again tomorrow.');}
@@ -50,14 +50,14 @@ async function handle(req:Request){
  if(path[0]==='suggestions'){
   if(!['mosque','flag','correction'].includes(v.kind))throw Error('Choose a valid submission type.');
   if(typeof v.note!=='string'||v.note.trim().length<5||v.note.length>600)throw Error('Add a short explanation between 5 and 600 characters.');
-  if(v.kind==='mosque'){if(typeof v.name!=='string'||v.name.trim().length<3||v.name.length>160)throw Error('Add the mosque name.');const lat=Number(v.lat),lon=Number(v.lon);if(!Number.isFinite(lat)||!Number.isFinite(lon)||lat<24.80||lat>25.02||lon<91.70||lon>92.05)throw Error('Choose a location in the Sylhet city area.');v.lat=lat;v.lon=lon;v.nameBn=String(v.nameBn||'').slice(0,160);v.area=String(v.area||'').slice(0,160);}
+  if(v.kind==='mosque'){if(typeof v.name!=='string'||v.name.trim().length<3||v.name.length>160)throw Error('Add the mosque name.');const blank=(n:any)=>n===undefined||n===null||n==='';const pinless=blank(v.lat)&&blank(v.lon);const lat=pinless?null:Number(v.lat),lon=pinless?null:Number(v.lon);if(!pinless&&(blank(v.lat)||blank(v.lon)||!Number.isFinite(lat)||!Number.isFinite(lon)||lat!<24.80||lat!>25.02||lon!<91.70||lon!>92.05))throw Error('Choose a location in Sylhet or leave both coordinate fields empty.');v.lat=lat;v.lon=lon;v.nameBn=String(v.nameBn||'').slice(0,160);v.area=String(v.area||'').slice(0,160);}
   if(v.kind==='flag'){const row=await d.prepare("SELECT id FROM reports WHERE id=? AND status='approved'").bind(String(v.reportId)).first();if(!row)throw Error('Report not found.');}
   if(v.kind==='correction'&&!(await allMosques()).some(m=>m.id===v.mosqueId))throw Error('Mosque not found.');
   await limit(u.id,'suggestion',10);const id=crypto.randomUUID();await d.prepare('INSERT INTO suggestions(id,user_id,kind,payload,created,status) VALUES(?,?,?,?,?,?)').bind(id,u.id,v.kind,JSON.stringify(v),new Date().toISOString(),'pending').run();return json({id,status:'pending'},201);
  }
 
  if(path[0]==='settings'){
-  if(!u.admin)return json({error:'Owner access required.'},403);const next=validateSettings(v),ms=await allMosques();
+  if(!u.admin)return json({error:'Owner access required.'},403);const next=validateSettings(v),ms=await allMosques();if(!next.categories.some((c:any)=>c.id==='unassigned'))throw Error('Keep the Other localities group for new mosque suggestions.');
   if(next.featuredMosqueId&&!ms.some(m=>m.id===next.featuredMosqueId&&!m.hidden))throw Error('Choose a visible mosque for the first listing.');
   const old=await settings();const removed=old.categories.filter((c:any)=>!next.categories.some((n:any)=>n.id===c.id));
   if(ms.some(m=>removed.some((c:any)=>c.id===m.category_id)))throw Error('Move the mosques out of a locality before removing it.');
@@ -80,7 +80,7 @@ async function handle(req:Request){
   const table=v.type==='report'?'reports':v.type==='suggestion'?'suggestions':null;if(!table)throw Error('Invalid review type.');const row:any=await d.prepare('SELECT * FROM '+table+' WHERE id=?').bind(String(v.id)).first();if(!row)throw Error('Submission not found.');
   const statements=[];
   if(table==='suggestions'&&v.status==='approved'&&row.status==='pending'){
-   const p=JSON.parse(row.payload);if(row.kind==='mosque'){statements.push(d.prepare('INSERT OR IGNORE INTO mosques(id,name,name_bn,lat,lon,area,source_url) VALUES(?,?,?,?,?,?,?)').bind('community-'+row.id,p.name,p.nameBn||'',String(p.lat),String(p.lon),p.area||'',''));}
+   const p=JSON.parse(row.payload);if(row.kind==='mosque'){statements.push(d.prepare('INSERT OR IGNORE INTO mosques(id,name,name_bn,lat,lon,area,source_url) VALUES(?,?,?,?,?,?,?)').bind('community-'+row.id,p.name,p.nameBn||'',p.lat===null?'':String(p.lat),p.lon===null?'':String(p.lon),p.area||'',''));}
    else if(row.kind==='flag')statements.push(d.prepare("UPDATE reports SET status='rejected',review_note=? WHERE id=?").bind(v.note||'Withdrawn after a correction.',p.reportId));
    else if(row.kind==='correction'&&!v.note.trim())throw Error('Add a note describing the directory correction you made.');
   }
